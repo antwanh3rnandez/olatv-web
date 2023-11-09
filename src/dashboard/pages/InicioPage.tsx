@@ -63,7 +63,7 @@ export const InicioPage = () => {
   const [imagesMovies, setImagesMovies] = useState<string[]>([]); 
   useEffect(() => {
     const loadImagesMovie = async () => {
-      const imageImports = [];
+      const imageImports: string[] = [];
 
       for (let i = 1; i <= 13; i++) {
         const { default: image } = await import(`../../assets/movies-slide/${i}.webp`);
@@ -79,7 +79,7 @@ export const InicioPage = () => {
   const [imagesChannels, setImagesChannels] = useState<string[]>([]); 
   useEffect(() => {
     const loadImagesChannels = async () => {
-      const imageImports = [];
+      const imageImports: string[] = [];
 
       for (let i = 1; i <= 16; i++) {
         const { default: image } = await import(`../../assets/channels-slide/${i}.webp`);
@@ -95,7 +95,7 @@ export const InicioPage = () => {
   const [imagesLeagues, setImagesLeagues] = useState<string[]>([]); 
   useEffect(() => {
     const loadImagesLeagues = async () => {
-      const imageImports = [];
+      const imageImports: string[] = [];
 
       for (let i = 1; i <= 14; i++) {
         const { default: image } = await import(`../../assets/leagues-slide/${i}.webp`);
