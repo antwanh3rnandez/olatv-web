@@ -25,6 +25,28 @@
 .red-primary {
   background-color: #ff110c;
 }
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; 
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-to-top.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+}
  
 @layer base {
   :root {
