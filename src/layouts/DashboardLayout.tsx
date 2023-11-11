@@ -1,5 +1,4 @@
-import { ReactNode, useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { ReactNode, useState, useEffect, useMemo } from "react";
 import { useTheme } from "../components/ThemeProvider"
 import { ModeToggle } from "../components/ToggleDarkMode";
 import logoLight from '../assets/olatv-logo.png';
@@ -14,7 +13,7 @@ export const DashboardLayout = ({ children }: { children: ReactNode }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
-  const menuOptions = [
+  const menuOptions = useMemo(() =>  [
     {
       path: "inicio",
       name: "Inicio",
@@ -39,7 +38,7 @@ export const DashboardLayout = ({ children }: { children: ReactNode }) => {
       path: "contacto",
       name: "Contactenos",
     },
-  ];
+  ], []);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -146,7 +145,7 @@ export const DashboardLayout = ({ children }: { children: ReactNode }) => {
       <main className="" onClick={closeMobileMenu}>
         {children}
         <FloatingWhatsApp 
-            phoneNumber='8114896623'
+            phoneNumber='8114445896'
             accountName='OlaTV Oficial'
             statusMessage='Normalmente responde en algunos segundos'
             chatMessage="Hola, Como podemos ayudarte hoy? 🤝"
