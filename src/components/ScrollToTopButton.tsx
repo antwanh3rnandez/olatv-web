@@ -22,7 +22,7 @@ export const ScrollToTopButton = () => {
 
   return (
     <button className={`scroll-to-top ${isVisible ? 'visible' : 'hidden'}`} onClick={scrollToTop}>
-      <IconChevronUp size={64} />
+      <IconChevronUp size={32} />
     </button>
   );
 };
