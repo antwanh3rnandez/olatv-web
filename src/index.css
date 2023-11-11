@@ -30,7 +30,7 @@
   position: fixed;
   bottom: 2rem;
   left: 2rem; 
-  background-color: #007bff;
+  background-color: rgba(0, 123, 255, 0.5);
   color: #fff;
   border: none;
   border-radius: 50%;
