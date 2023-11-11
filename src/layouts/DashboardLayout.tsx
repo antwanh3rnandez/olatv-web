@@ -1,6 +1,7 @@
 import { ReactNode, useState, useEffect, useMemo } from "react";
 import { useTheme } from "../components/ThemeProvider"
 import { ModeToggle } from "../components/ToggleDarkMode";
+import { ScrollToTopButton } from "../components/ScrollToTopButton";
 import logoLight from '../assets/olatv-logo.png';
 import logoDark from '../assets/olatv-logo-white.png';
 import { IconMenu2 } from "@tabler/icons-react";
@@ -153,7 +154,8 @@ export const DashboardLayout = ({ children }: { children: ReactNode }) => {
             chatMessage="Hola, Como podemos ayudarte hoy? 🤝"
             placeholder='Escribe un mensaje...'
             chatboxStyle={{color: 'black'}}
-          />
+        />
+        <ScrollToTopButton />
       </main>
     </>
   );
