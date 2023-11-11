@@ -23,10 +23,10 @@ export const ScrollToTopButton = () => {
   return (
     <button className={`scroll-to-top bg-opacity-50 bg-black dark:bg-white dark:bg-opacity-50 ${isVisible ? 'visible' : 'hidden'}`} onClick={scrollToTop}>
       <IconChevronUp 
-        size={55} 
+        size={40} 
         style={{ 
-          width: '55px', 
-          height: '55px' 
+          width: '40px', 
+          height: '40px' 
         }} 
         className="text-white dark:text-black"
       />
