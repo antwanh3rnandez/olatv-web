@@ -48,23 +48,25 @@ export const DashboardLayout = ({ children }: { children: ReactNode }) => {
     setIsMobileMenuOpen(false);
   };
 
-  useEffect(() => {
-    // Detectar la sección activa al hacer scroll
-    const handleScroll = () => {
-      const sections = menuOptions.map((option) => document.getElementById(option.path));
-      const scrollPosition = window.scrollY;
+  const sections = menuOptions.map((option) => document.getElementById(option.path));
 
-      for (let i = sections.length - 1; i >= 0; i--) {
-        if (sections[i] && scrollPosition >= sections[i].offsetTop - 50) {
-          setActiveSection(menuOptions[i].path);
-          break;
-        }
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+  
+    for (let i = sections.length - 1; i >= 0; i--) {
+      const section = sections[i];
+  
+      if (section !== null && scrollPosition >= section.offsetTop - 50) {
+        setActiveSection(menuOptions[i].path);
+        break;
       }
-    };
-
+    }
+  };
+  
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     handleScroll(); // Llamada inicial para establecer el estado activo
-
+  
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
