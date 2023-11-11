@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { IconChevronUp } from '@tabler/icons-react';
 
-const ScrollToTopButton = () => {
+export const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const scrollToTop = () => {
