@@ -28,13 +28,13 @@
 
 .scroll-to-top {
   position: fixed;
-  bottom: 30px;
-  left: 30px; 
+  bottom: 2rem;
+  left: 2rem; 
   background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 50%;
-  padding: 10px;
+  padding: 0.5rem;
   cursor: pointer;
   transition: opacity 0.3s ease;
 }
