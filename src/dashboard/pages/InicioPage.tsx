@@ -14,7 +14,7 @@ import {
 } from "../../components/ui/accordion"
 
 import { Button } from "../../components/ui/button"
-import hero from "../../assets/hero.webp"
+import hero from "../../assets/familia2.jpg"
 
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
@@ -57,6 +57,31 @@ const faqs = [
     answer: 'Para saber todo acerca de nuestros planes para revendedores ve a la sección de Reseller y cualquier duda que tengas al respecto escríbenos al chat.',
   },
 ];
+
+function CustomSplide({ id, images, extraClass, perPage }) {
+
+  return (
+    <Splide
+      id={id}
+      className={extraClass}
+      options={{
+        type: 'loop',
+        perPage: perPage,
+        perMove: 1,
+        pagination: false,
+        autoplay: true, // Utilizar directamente la opción autoplay
+      interval: 2000, // Puedes ajustar el intervalo entre diapositivas aquí
+        speed: 1000,
+      }}
+    >
+      {images.map((image, index) => (
+        <SplideSlide key={index} id={`${id}-slide${index}`}>
+          <img src={image} alt={`Image ${index + 1}`} />
+        </SplideSlide>
+      ))}
+    </Splide>
+  );
+}
 
 export const InicioPage = () => {
 
@@ -108,13 +133,16 @@ export const InicioPage = () => {
     loadImagesLeagues();
   }, []);
 
+  
+
+
   return (
     <div className="flex-col md:flex">
-      <div className="relative w-full bg-black h-[100vh]">
+      <div className="relative w-full bg-black h-[90vh]">
         <img className="w-full h-full object-cover" src={hero} alt="Hero" />
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <div
-            className="w-full h-full bg-black bg-opacity-50 text-white text-center p-4 rounded"
+            className="w-full h-full bg-black bg-opacity-40 text-white text-center p-4 rounded"
             style={{ backdropFilter: 'blur(0px)' }}
           >
             <div className="w-full h-full flex flex-col items-center justify-center">
@@ -135,112 +163,37 @@ export const InicioPage = () => {
           </div>
         </div>
         {/* PELICULAS Y CANALES */}
-        <div className='flex flex-col'>
+        <div className='flex flex-col' id='contenido'>
           <div className='my-6'>
-            <p className='text-2xl text-center' style={{fontFamily: 'Bungee'}}>
+            <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
               <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>Películas, Series y Canales</p>
             </p>
             <p className='text-xl text-center' style={{fontFamily: 'Poppins'}}>
               <p style={{fontStyle: 'normal'}}>Transmisión ilimitada de las Últimas Películas, Series y Variante de Canales en Vivo</p>
             </p>
           </div>
-          <Splide className="splide splideMovies splide--loop splide--ltr splide--draggable is-active is-initialized" aria-label="My Favorite Images"
-              options={ {
-                type   : 'loop',
-                perPage: 9,
-                perMove: 1,
-                pagination: false,
-                pauseOnHover: true,
-                pauseOnFocus: false,
-                rewind: true,
-                // width : 800,
-                // height : 350,
-                gap   : '0rem',
-                autoplay: true,
-                autoplayOptions: {
-                  // delay: 5000, // Retardo entre diapositivas en milisegundos
-                },
-                speed: 1000,
-              } }
-            >
-              {imagesMovies.map((imageMovie, index) => (
-                <SplideSlide key={index} data-splide-interval="2000">
-                  <img src={imageMovie} alt={`Image ${index + 1}`} />
-                </SplideSlide>
-              ))}
-            </Splide>
-            <div className='my-3'>
-              <Splide className="splide splideChannels splide--loop splide--ltr splide--draggable is-active is-initialized" aria-label="My Favorite Images"
-                options={ {
-                  type   : 'loop',
-                  perPage: 9,
-                  perMove: 1,
-                  pagination: false,
-                  pauseOnHover: true,
-                  pauseOnFocus: false,
-                  rewind: true,
-                  // width : 800,
-                  // height : 350,
-                  gap   : '0rem',
-                  autoplay: true,
-                  autoplayOptions: {
-                    // delay: 5000, // Retardo entre diapositivas en milisegundos
-                  },
-                  speed: 1000,
-                } }
-              >
-                {imagesChannels.map((imageMovie, index) => (
-                  <SplideSlide key={index} data-splide-interval="2000">
-                    <img src={imageMovie} alt={`Image ${index + 1}`} />
-                  </SplideSlide>
-                ))}
-              </Splide>
-            </div>
+          <CustomSplide id="splideMovies" perPage={9} extraClass={`my-3`} images={imagesMovies} />
+          <CustomSplide id="splideChannels" perPage={9} extraClass={`my-3`} images={imagesChannels} />
+          
         </div>
         {/* DEPORTES Y LIGAS */}
-        <div className='flex flex-col'>
-          <div className='mt-8 mb-6'>
-            <p className='text-2xl text-center' style={{fontFamily: 'Bungee'}}>
-              <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>
-                Deportes y Mejores Ligas
-              </p>
+        <div className='mt-8 mb-6'>
+          <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
+            <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>
+              Deportes y Mejores Ligas
             </p>
-            <p className='text-xl text-center' style={{fontFamily: 'Poppins'}}>
-              <p style={{fontStyle: 'normal'}}>
-                Transmisión Ilimitada de tus Deportes y Ligas Favoritas
-              </p>
+          </p>
+          <p className='text-xl text-center' style={{fontFamily: 'Poppins'}}>
+            <p style={{fontStyle: 'normal'}}>
+              Transmisión Ilimitada de tus Deportes y Ligas Favoritas
             </p>
-          </div>
-          <Splide className="splide splideMovies splide--loop splide--ltr splide--draggable is-active is-initialized" aria-label="My Favorite Images"
-              options={ {
-                type   : 'loop',
-                perPage: 7,
-                perMove: 1,
-                pagination: false,
-                pauseOnHover: true,
-                pauseOnFocus: false,
-                rewind: true,
-                // width : 800,
-                // height : 350,
-                gap   : '0rem',
-                autoplay: true,
-                autoplayOptions: {
-                  // delay: 5000, // Retardo entre diapositivas en milisegundos
-                },
-                speed: 1000,
-              } }
-            >
-              {imagesLeagues.map((imageMovie, index) => (
-                <SplideSlide key={index} data-splide-interval="2000">
-                  <img src={imageMovie} alt={`Image ${index + 1}`} />
-                </SplideSlide>
-              ))}
-            </Splide>
+          </p>
         </div>
+        <CustomSplide id="splideLeagues" perPage={7} extraClass={`my-3`} images={imagesLeagues} />
         {/* Planes Detalle */}
         <div className="flex-1 space-y-4 px-6 sm:px-16 md:px-32 lg:px-64 mt-[48px]">
           <div className='my-8' id='paquetes'>
-            <p className='text-2xl text-center' style={{fontFamily: 'Bungee'}}>
+            <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
               <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>
                 Nuestras Promociones
               </p>
@@ -274,7 +227,7 @@ export const InicioPage = () => {
                       </p>
                   </div>
                   <div className="mb-2 p-2 bg-gray-200 dark:bg-gray-700 h-24 flex flex-col items-center justify-center">
-                    <span className="sm:text-xl md:text-2xl xl:text-3xl font-light text-center" style={{fontFamily: 'Bungee'}}>3 pantallas simultáneas gratis</span>
+                    <span className="sm:text-xl md:text-2xl xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>3 pantallas simultáneas gratis</span>
                   </div>
                   <div className="p-6">
                       <a
@@ -311,7 +264,7 @@ export const InicioPage = () => {
                       </p>
                   </div>
                   <div className="mb-2 p-2 bg-gray-200 dark:bg-gray-700 h-24 flex flex-col items-center justify-center">
-                    <span className="sm:text-xl md:text-2xl xl:text-3xl font-light text-center" style={{fontFamily: 'Bungee'}}>1 Mes de Servicio gratis</span>
+                    <span className="sm:text-xl md:text-2xl xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>1 Mes de Servicio gratis</span>
                   </div>
                   <div className="p-6">
                       <a
@@ -348,7 +301,7 @@ export const InicioPage = () => {
                       </p>
                   </div>
                   <div className="mb-2 p-2 bg-gray-200 dark:bg-gray-700 h-24 flex flex-col items-center justify-center">
-                    <span className="sm:text-xl md:text-2xl xl:text-3xl font-light text-center" style={{fontFamily: 'Bungee'}}>2 Meses de Servicio gratis</span>
+                    <span className="sm:text-xl md:text-2xl xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>2 Meses de Servicio gratis</span>
                   </div>
                   <div className="p-6">
                       <a
@@ -363,9 +316,9 @@ export const InicioPage = () => {
           </div>
         </div>
         {/* Planes Reseller */}
-        <div className="space-y-4 px-6 xl:px-64">
+        <div className="space-y-4 px-6 xl:px-64" id='reseller'>
           <div className='my-24' id='paquetes'>
-            <p className='text-2xl text-center' style={{fontFamily: 'Bungee'}}>
+            <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
               <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>
                 ¿Desea obtener ganancias?
               </p>
@@ -399,7 +352,7 @@ export const InicioPage = () => {
                       </p>
                   </div>
                   <div className="mb-2 p-2 bg-gray-200 dark:bg-gray-700 h-24 flex flex-col items-center justify-center">
-                    <span className="sm:text-xl md:text-2xl xl:text-3xl font-light text-center" style={{fontFamily: 'Bungee'}}>Paquete de 30 Créditos</span>
+                    <span className="sm:text-xl md:text-2xl xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>Paquete de 30 Créditos</span>
                   </div>
                   <div className="p-6">
                       <a
@@ -433,7 +386,7 @@ export const InicioPage = () => {
                       </p>
                   </div>
                   <div className="mb-2 p-2 bg-gray-200 dark:bg-gray-700 h-24 flex flex-col items-center justify-center">
-                    <span className="sm:text-xl md:text-2xl xl:text-3xl font-light text-center" style={{fontFamily: 'Bungee'}}>Paquete de 50 Créditos</span>
+                    <span className="sm:text-xl md:text-2xl xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>Paquete de 50 Créditos</span>
                   </div>
                   <div className="p-6">
                       <a
@@ -467,7 +420,7 @@ export const InicioPage = () => {
                       </p>
                   </div>
                   <div className="mb-2 p-2 bg-gray-200 dark:bg-gray-700 h-24 flex flex-col items-center justify-center">
-                    <span className="sm:text-xl md:text-2xl xl:text-3xl font-light text-center" style={{fontFamily: 'Bungee'}}>Paquete de 100 Créditos</span>
+                    <span className="sm:text-xl md:text-2xl xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>Paquete de 100 Créditos</span>
                   </div>
                   <div className="p-6">
                       <a
@@ -501,7 +454,7 @@ export const InicioPage = () => {
                       </p>
                   </div>
                   <div className="mb-2 p-2 bg-gray-200 dark:bg-gray-700 h-24 flex flex-col items-center justify-center">
-                    <span className="sm:text-xl md:text-2xl xl:text-3xl font-light text-center" style={{fontFamily: 'Bungee'}}>Paquete de 300 Créditos</span>
+                    <span className="sm:text-xl md:text-2xl xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>Paquete de 300 Créditos</span>
                   </div>
                   <div className="p-6">
                       <a
@@ -535,7 +488,7 @@ export const InicioPage = () => {
                       </p>
                   </div>
                   <div className="mb-2 p-2 bg-gray-200 dark:bg-gray-700 h-24 flex flex-col items-center justify-center">
-                    <span className="sm:text-xl md:text-2xl xl:text-3xl font-light text-center" style={{fontFamily: 'Bungee'}}>Paquete de 500 Créditos</span>
+                    <span className="sm:text-xl md:text-2xl xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>Paquete de 500 Créditos</span>
                   </div>
                   <div className="p-6">
                       <a
@@ -549,9 +502,10 @@ export const InicioPage = () => {
             </div>
           </div>
         </div>
-        <div className="space-y-4 px-6 sm:px-16 md:px-32 xl:px-64 mt-12">
+        {/* FAQs */}
+        <div className="space-y-4 px-6 sm:px-16 md:px-32 xl:px-64 mt-12" id='faqs'>
           <div className='my-24'>
-            <p className='text-2xl text-center' style={{fontFamily: 'Bungee'}}>
+            <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
                 <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>
                   Preguntas Frecuentes
                 </p>
