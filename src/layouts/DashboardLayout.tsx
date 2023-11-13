@@ -16,7 +16,7 @@ export const DashboardLayout = ({ children }: { children: ReactNode }) => {
 
   const menuOptions = useMemo(() =>  [
     {
-      path: "inicio",
+      path: "",
       name: "Inicio",
     },
     {
