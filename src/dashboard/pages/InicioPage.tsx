@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react';
+import { useTheme } from "../../components/ThemeProvider"
+import logoLight from '../../assets/olatv-logo.png';
+import logoDark from '../../assets/olatv-logo-white.png';
 import { 
   Card, 
   CardContent, 
@@ -133,11 +136,15 @@ export const InicioPage = () => {
     loadImagesLeagues();
   }, []);
 
-  
+    // Obtén el estado actual del tema usando el hook useTheme
+    const { theme } = useTheme();
+
+    // Determina qué logo utilizar según el tema
+    const logo = theme === "dark" ? logoDark : logoLight;
 
 
   return (
-    <div className="flex-col md:flex">
+    <div className="flex-col md:flex" id='inicio'>
       <div className="relative w-full bg-black h-[90vh]">
         <img className="w-full h-full object-cover" src={hero} alt="Hero" />
         <div className="absolute inset-0 flex flex-col items-center justify-center">
@@ -151,7 +158,7 @@ export const InicioPage = () => {
                 </h2>
               <div className="mt-[12px]">
                 <h2 className="hero-text-sub">
-                Vea sus Deportes y Películas Favoritas con el Mejor Suscripción a IPTV : Más de 20 000 Canales en <br></br> Vivo con una Calidad Impresionante de 4K/FHD/HD | Obtenga Acceso Ilimitado a la Biblioteca VOD <br></br> con las Últimas Películas y Series | Regístrese Ahora para Obtener Descuentos Exclusivos y Soporte 24/7
+                Vea sus Deportes y Películas Favoritas con el Mejor Suscripción a IPTV | Más de 2 000 Canales en <br></br> Vivo con una Calidad Impresionante de 4K/FHD/HD | Obtenga Acceso Ilimitado a la Biblioteca VOD <br></br> con las Últimas Películas y Series | Regístrese Ahora para Obtener Descuentos Exclusivos y Soporte 24/7
                 </h2>
               </div>
               <div className="mt-[24px]">
@@ -164,6 +171,10 @@ export const InicioPage = () => {
         </div>
         {/* PELICULAS Y CANALES */}
         <div className='flex flex-col' id='contenido'>
+        { /* Logo Flotante */ }
+          <div className='logo-container'>
+            <img src={logo} alt="Logo" />
+          </div>
           <div className='my-6'>
             <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
               <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>Películas, Series y Canales</p>
@@ -176,6 +187,7 @@ export const InicioPage = () => {
           <CustomSplide id="splideChannels" perPage={9} extraClass={`my-3`} images={imagesChannels} />
           
         </div>
+        
         {/* DEPORTES Y LIGAS */}
         <div className='mt-8 mb-6'>
           <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
@@ -203,16 +215,23 @@ export const InicioPage = () => {
                 Planes Premium
               </p>
             </p>
-            <div className="mt-8 grid xl:grid-cols-3 justify-center gap-6">
+            <div className="mt-8 grid xl:grid-cols-3 justify-center items-center gap-6">
               {/* Plan 1 mes */}
               <Card className="rounded-xl hover:shadow-xl">
                   <div className="p-6 text-center">
-                      <h3 className="text-xl font-semibold mb-4">1 Mes de Servicio</h3> 
+                      <p className="xl:text-lg 2xl:text-xl font-semibold mb-4 flex flex-row justify-center items-center">
+                        <span>&nbsp;&nbsp;1 Mes de Servicio</span>
+                        <span className="text-2xl xl:text-3xl 2xl:text-4xl font-semilight text-redprimary">&nbsp;&nbsp;</span>
+                      </p> 
                       <div style={{fontFamily: 'Poppins', fontWeight: '400'}} className="flex items-center justify-center mb-4">
                           <span className="text-2xl xl:text-4xl font-semilight text-redprimary">$</span>
                           <span className="text-5xl xl:text-7xl font-semilight text-redprimary">7</span>
                           <span className="text-2xl xl:text-3xl font-light "> USD</span>
                       </div>
+                      <p className='my-2 text-xl text-center flex flex-row space-x-2'>
+                          <em><IconCheck size={32} className='text-redprimary'/></em>
+                          <em className='font-extralight'> 3 pantallas simultáneas</em>
+                      </p>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
                           <em><IconCheck size={32} className='text-redprimary'/></em>
                           <em className='font-extralight'> Más de 25,000 Peliculas</em>
@@ -227,11 +246,12 @@ export const InicioPage = () => {
                       </p>
                   </div>
                   <div className="mb-2 p-2 bg-gray-200 dark:bg-gray-700 h-24 flex flex-col items-center justify-center">
-                    <span className="sm:text-xl md:text-2xl xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>3 pantallas simultáneas gratis</span>
+                    <span className="md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>3 pantallas simultáneas</span>
                   </div>
                   <div className="p-6">
                       <a
-                      href="#"
+                      href="https://api.whatsapp.com/send/?phone=+584244632518&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
+                      target="_blank"
                       className="h-20 flex flex-col justify-center items-center w-full py-2 px-4 bg-redprimary text-white rounded-sm text-center font-semibold hover:bg-red-700 transition duration-300"
                   >
                       Comprar
@@ -241,15 +261,19 @@ export const InicioPage = () => {
               {/* Plan 6 meses */}
               <Card className="rounded-xl hover:shadow-xl">
                   <div className="p-6 text-center">
-                      <p className="text-xl font-semibold mb-4 flex flex-row justify-center items-center">
-                        Paga 5 Meses y Recibe
-                        <span className="text-2xl xl:text-4xl font-semilight text-redprimary">&nbsp;6</span>
+                      <p className="xl:text-lg 2xl:text-xl font-semibold mb-4 flex flex-row justify-center items-center">
+                        <span>Paga 5 Meses y Recibe</span>
+                        <span className="text-2xl xl:text-3xl 2xl:text-4xl font-semilight text-redprimary">&nbsp;6</span>
                       </p> 
                       <div style={{fontFamily: 'Poppins', fontWeight: '400'}} className="flex items-center justify-center mb-4">
                           <span className="text-2xl xl:text-4xl font-semilight text-redprimary">$</span>
                           <span className="text-5xl xl:text-7xl font-semilight text-redprimary">35</span>
                           <span className="text-2xl xl:text-3xl font-light "> USD</span>
                       </div>
+                      <p className='my-2 text-xl text-center flex flex-row space-x-2'>
+                          <em><IconCheck size={32} className='text-redprimary'/></em>
+                          <em className='font-extralight'> 3 pantallas simultáneas</em>
+                      </p>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
                           <em><IconCheck size={32} className='text-redprimary'/></em>
                           <em className='font-extralight'> Más de 25,000 Peliculas</em>
@@ -264,11 +288,12 @@ export const InicioPage = () => {
                       </p>
                   </div>
                   <div className="mb-2 p-2 bg-gray-200 dark:bg-gray-700 h-24 flex flex-col items-center justify-center">
-                    <span className="sm:text-xl md:text-2xl xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>1 Mes de Servicio gratis</span>
+                    <span className="md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>1 Mes de Servicio gratis</span>
                   </div>
                   <div className="p-6">
                       <a
-                      href="#"
+                      href="https://api.whatsapp.com/send/?phone=+584244632518&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
+                      target="_blank"
                       className="h-20 flex flex-col justify-center items-center w-full py-2 px-4 bg-redprimary text-white rounded-sm text-center font-semibold hover:bg-red-700 transition duration-300"
                   >
                       Comprar
@@ -278,15 +303,19 @@ export const InicioPage = () => {
               {/* Plan 12 meses */}
               <Card className="rounded-xl hover:shadow-xl">
                   <div className="p-6 text-center">
-                      <p className="text-xl font-semibold mb-4 flex flex-row justify-center items-center">
-                        Paga 10 Meses y Recibe
-                        <span className="text-2xl xl:text-4xl font-semilight text-redprimary">&nbsp;12</span>
+                      <p className="xl:text-lg 2xl:text-xl font-semibold mb-4 flex flex-row justify-center items-center">
+                        <span>Paga 10 Meses y Recibe</span>
+                        <span className="text-2xl xl:text-3xl 2xl:text-4xl font-semilight text-redprimary">&nbsp;12</span>
                       </p> 
                       <div style={{fontFamily: 'Poppins', fontWeight: '400'}} className="flex items-center justify-center mb-4">
                           <span className="text-2xl xl:text-4xl font-semilight text-redprimary">$</span>
                           <span className="text-5xl xl:text-7xl font-semilight text-redprimary">70</span>
                           <span className="text-2xl xl:text-3xl font-light "> USD</span>
                       </div>
+                      <p className='my-2 text-xl text-center flex flex-row space-x-2'>
+                          <em><IconCheck size={32} className='text-redprimary'/></em>
+                          <em className='font-extralight'> 3 pantallas simultáneas</em>
+                      </p>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
                           <em><IconCheck size={32} className='text-redprimary'/></em>
                           <em className='font-extralight'> Más de 25,000 Peliculas</em>
@@ -301,11 +330,12 @@ export const InicioPage = () => {
                       </p>
                   </div>
                   <div className="mb-2 p-2 bg-gray-200 dark:bg-gray-700 h-24 flex flex-col items-center justify-center">
-                    <span className="sm:text-xl md:text-2xl xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>2 Meses de Servicio gratis</span>
+                    <span className="md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>2 Meses de Servicio gratis</span>
                   </div>
                   <div className="p-6">
                       <a
-                      href="#"
+                      href="https://api.whatsapp.com/send/?phone=+584244632518&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
+                      target="_blank"
                       className="h-20 flex flex-col justify-center items-center w-full py-2 px-4 bg-redprimary text-white rounded-sm text-center font-semibold hover:bg-red-700 transition duration-300"
                   >
                       Comprar
@@ -340,6 +370,10 @@ export const InicioPage = () => {
                       </div>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
                           <em><IconCheck size={32} className='text-redprimary'/></em>
+                          <em className='font-extralight'> 3 pantallas simultáneas</em>
+                      </p>
+                      <p className='my-2 text-xl text-center flex flex-row space-x-2'>
+                          <em><IconCheck size={32} className='text-redprimary'/></em>
                           <em className='font-extralight'> Más de 25,000 Peliculas</em>
                       </p>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
@@ -352,11 +386,12 @@ export const InicioPage = () => {
                       </p>
                   </div>
                   <div className="mb-2 p-2 bg-gray-200 dark:bg-gray-700 h-24 flex flex-col items-center justify-center">
-                    <span className="sm:text-xl md:text-2xl xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>Paquete de 30 Créditos</span>
+                    <span className="md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>Paquete de 30 Créditos</span>
                   </div>
                   <div className="p-6">
                       <a
-                      href="#"
+                      href="https://api.whatsapp.com/send/?phone=+584244632518&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
+                      target="_blank"
                       className="h-20 flex flex-col justify-center items-center w-full py-2 px-4 bg-redprimary text-white rounded-sm text-center font-semibold hover:bg-red-700 transition duration-300"
                   >
                       Comprar
@@ -374,6 +409,10 @@ export const InicioPage = () => {
                       </div>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
                           <em><IconCheck size={32} className='text-redprimary'/></em>
+                          <em className='font-extralight'> 3 pantallas simultáneas</em>
+                      </p>
+                      <p className='my-2 text-xl text-center flex flex-row space-x-2'>
+                          <em><IconCheck size={32} className='text-redprimary'/></em>
                           <em className='font-extralight'> Más de 25,000 Peliculas</em>
                       </p>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
@@ -386,11 +425,12 @@ export const InicioPage = () => {
                       </p>
                   </div>
                   <div className="mb-2 p-2 bg-gray-200 dark:bg-gray-700 h-24 flex flex-col items-center justify-center">
-                    <span className="sm:text-xl md:text-2xl xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>Paquete de 50 Créditos</span>
+                    <span className="md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>Paquete de 50 Créditos</span>
                   </div>
                   <div className="p-6">
                       <a
-                      href="#"
+                      href="https://api.whatsapp.com/send/?phone=+584244632518&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
+                      target="_blank"
                       className="h-20 flex flex-col justify-center items-center w-full py-2 px-4 bg-redprimary text-white rounded-sm text-center font-semibold hover:bg-red-700 transition duration-300"
                   >
                       Comprar
@@ -408,6 +448,10 @@ export const InicioPage = () => {
                       </div>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
                           <em><IconCheck size={32} className='text-redprimary'/></em>
+                          <em className='font-extralight'> 3 pantallas simultáneas</em>
+                      </p>
+                      <p className='my-2 text-xl text-center flex flex-row space-x-2'>
+                          <em><IconCheck size={32} className='text-redprimary'/></em>
                           <em className='font-extralight'> Más de 25,000 Peliculas</em>
                       </p>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
@@ -420,11 +464,12 @@ export const InicioPage = () => {
                       </p>
                   </div>
                   <div className="mb-2 p-2 bg-gray-200 dark:bg-gray-700 h-24 flex flex-col items-center justify-center">
-                    <span className="sm:text-xl md:text-2xl xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>Paquete de 100 Créditos</span>
+                    <span className="md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>Paquete de 100 Créditos</span>
                   </div>
                   <div className="p-6">
                       <a
-                      href="#"
+                      href="https://api.whatsapp.com/send/?phone=+584244632518&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
+                      target="_blank"
                       className="h-20 flex flex-col justify-center items-center w-full py-2 px-4 bg-redprimary text-white rounded-sm text-center font-semibold hover:bg-red-700 transition duration-300"
                   >
                       Comprar
@@ -442,6 +487,10 @@ export const InicioPage = () => {
                       </div>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
                           <em><IconCheck size={32} className='text-redprimary'/></em>
+                          <em className='font-extralight'> 3 pantallas simultáneas</em>
+                      </p>
+                      <p className='my-2 text-xl text-center flex flex-row space-x-2'>
+                          <em><IconCheck size={32} className='text-redprimary'/></em>
                           <em className='font-extralight'> Más de 25,000 Peliculas</em>
                       </p>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
@@ -454,11 +503,12 @@ export const InicioPage = () => {
                       </p>
                   </div>
                   <div className="mb-2 p-2 bg-gray-200 dark:bg-gray-700 h-24 flex flex-col items-center justify-center">
-                    <span className="sm:text-xl md:text-2xl xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>Paquete de 300 Créditos</span>
+                    <span className="md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>Paquete de 300 Créditos</span>
                   </div>
                   <div className="p-6">
                       <a
-                      href="#"
+                      href="https://api.whatsapp.com/send/?phone=+584244632518&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
+                      target="_blank"
                       className="h-20 flex flex-col justify-center items-center w-full py-2 px-4 bg-redprimary text-white rounded-sm text-center font-semibold hover:bg-red-700 transition duration-300"
                   >
                       Comprar
@@ -476,6 +526,10 @@ export const InicioPage = () => {
                       </div>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
                           <em><IconCheck size={32} className='text-redprimary'/></em>
+                          <em className='font-extralight'> 3 pantallas simultáneas</em>
+                      </p>
+                      <p className='my-2 text-xl text-center flex flex-row space-x-2'>
+                          <em><IconCheck size={32} className='text-redprimary'/></em>
                           <em className='font-extralight'> Más de 25,000 Peliculas</em>
                       </p>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
@@ -488,11 +542,12 @@ export const InicioPage = () => {
                       </p>
                   </div>
                   <div className="mb-2 p-2 bg-gray-200 dark:bg-gray-700 h-24 flex flex-col items-center justify-center">
-                    <span className="sm:text-xl md:text-2xl xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>Paquete de 500 Créditos</span>
+                    <span className="md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>Paquete de 500 Créditos</span>
                   </div>
                   <div className="p-6">
                       <a
-                      href="#"
+                      href="https://api.whatsapp.com/send/?phone=+584244632518&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
+                      target="_blank"
                       className="h-20 flex flex-col justify-center items-center w-full py-2 px-4 bg-redprimary text-white rounded-sm text-center font-semibold hover:bg-red-700 transition duration-300"
                   >
                       Comprar
@@ -515,12 +570,12 @@ export const InicioPage = () => {
                   Estas son algunas de las preguntas mas realizadas por nuestros clientes
                 </p>
               </p>
-              <div className='mt-8 2xl:px-24'>
-                <div className='grid grid-cols-2 gap-4'>
+              <div className='mt-8 xl:mx-2 2xl:px-24'>
+                <div className='grid grid-cols-2 gap-4 justify-center items-center'>
                   {faqs.map((faq, index) => (
-                    <Accordion type="single" collapsible className="w-full" style={{fontFamily: 'Poppins'}}>
+                    <Accordion type="single" collapsible className="w-full text-start" style={{fontFamily: 'Poppins'}}>
                       <AccordionItem key={index} value={`item-${faq.id}`}>
-                        <AccordionTrigger>
+                        <AccordionTrigger className='text-start'>
                           <p>{faq.question}</p>
                         </AccordionTrigger>
                         <AccordionContent>

@@ -32,6 +32,14 @@ export const DashboardLayout = ({ children }: { children: ReactNode }) => {
       name: "Planes Reseller",
     },
     {
+       path: "distribuidores",
+       name: "Distribuidores",
+    },
+    {
+       path: "descargas",
+       name: "Descargas",
+    },
+    {
       path: "faqs",
       name: "Preguntas Frecuentes",
     },
@@ -81,14 +89,14 @@ export const DashboardLayout = ({ children }: { children: ReactNode }) => {
 
   return (
     <>
-      <div className={`border-b `} id="inicio">
-        <div className={`flex ${isMobileMenuOpen ? "border-b-2" : ""} h-24 items-center px-4 sm:px-16 md:px-32 lg:px-64`}>
-          <nav className="flex items-center space-x-4 lg:space-x-6">
+      <div className={`border-b`} id="inicio">
+        <div className={`flex flex-row ${isMobileMenuOpen ? "border-b-2" : ""} h-28 items-center justify-center px-4 `}>
+          <nav className="flex items-center space-x-4 lg:space-x-6 xl:space-x-8">
             <a href="/">
-              <img className="w-16" src={logo} alt="Logo" />
+              <img className="w-24" src={logo} alt="Logo" />
             </a>
             {/* Menú Normal */}
-            <div className="hidden lg:flex space-x-4 lg:justify-center">
+            <div className="hidden lg:flex space-x-4">
               {menuOptions.map((option, index) => (
                 <ScrollLink
                   to={option.path}
@@ -96,7 +104,7 @@ export const DashboardLayout = ({ children }: { children: ReactNode }) => {
                   spy={true}
                   offset={-50}
                   duration={500}
-                  className={`text-md font-medium transition-colors hover:text-primary uppercase ${activeSection === option.path ? "dark:text-white" : "text-muted-foreground"}`}
+                  className={`md:text-sm xl:text-md 2xl:text-md font-medium transition-colors hover:text-primary uppercase ${activeSection === option.path ? "text-redprimary dark:text-redprimary" : "text-muted-foreground"}`}
                   style={{fontFamily: 'Lexend'}}
                   key={index}
                 >
@@ -104,8 +112,11 @@ export const DashboardLayout = ({ children }: { children: ReactNode }) => {
                 </ScrollLink>
               ))}
             </div>
+            <div className="hidden lg:flex items-center">
+                <ModeToggle />
+            </div>
           </nav>
-          <div className="ml-auto flex items-center space-x-4">
+          <div className="lg:hidden ml-auto flex items-center space-x-4">
             <ModeToggle />
           </div>
           <div className="lg:hidden ml-auto flex items-center space-x-4">
@@ -133,8 +144,9 @@ export const DashboardLayout = ({ children }: { children: ReactNode }) => {
                     spy={true}
                     offset={-50}
                     duration={500}
-                    className={`block pl-6 text-md font-normal text-primary capitalize transition-colors hover:text-muted-foreground`}
+                    className={`block pl-6 xl:text-md font-normal text-primary capitalize transition-colors hover:text-muted-foreground`}
                     onClick={closeMobileMenu}
+                    style={{fontFamily: 'Lexend'}}
                   >
                     {option.name}
                   </ScrollLink>
@@ -148,13 +160,13 @@ export const DashboardLayout = ({ children }: { children: ReactNode }) => {
       <main className="" onClick={closeMobileMenu}>
         {children}
         <FloatingWhatsApp 
-            phoneNumber='8114445896'
+            phoneNumber='+584244632518'
             accountName='OlaTV Oficial'
             statusMessage='Normalmente responde en algunos segundos'
             chatMessage="Hola, Como podemos ayudarte hoy? 🤝"
             placeholder='Escribe un mensaje...'
             chatboxStyle={{color: 'black'}}
-        />
+          />
         <ScrollToTopButton />
       </main>
     </>

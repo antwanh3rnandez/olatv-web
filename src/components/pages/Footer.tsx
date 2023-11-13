@@ -1,6 +1,7 @@
 
 import { 
   IconBrandFacebook, 
+  IconBrandInstagram, 
   IconBrandTelegram,
   IconBrandWhatsapp, 
 } from '@tabler/icons-react/';
@@ -8,7 +9,7 @@ import {
 export const Footer = () => {
     return (
         <>
-        <div className='flex flex-col justify-center items-center' id='contacto'>
+        <div className='px-8 flex flex-col justify-center items-center' id='contacto'>
           <div className='xl:w-1/2 mb-12 xl:mb-20'>
             <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
               <p style={{fontStyle: 'normal'}} className='text-redprimary'>
@@ -18,24 +19,30 @@ export const Footer = () => {
           </div>
           <div className='mb-12 xl:mb-20 flex flex-col xl:flex-row gap-4 lg:gap:16 xl:gap-32'>
             <div className='flex flex-row'>
-              <IconBrandFacebook size={64} className='text-redprimary'/>
+              <IconBrandInstagram size={64} className='text-redprimary'/>
               <div className='flex flex-col items-start justify-center'>
-              <p className='md:text-xl xl:text-2xl font-normal text-start'>Facebook Fanpage</p>
-              <p style={{fontStyle: 'italic'}}>Faceboook Oficial</p>
+                <a href='https://www.instagram.com/olatv_oficial' target='_blank' className='hover:text-redprimary'>
+                  <p className='md:text-xl xl:text-2xl font-normal text-start'>Instagram Fanpage</p>
+                  <p style={{fontStyle: 'italic'}}>Instagram Oficial</p>
+                </a>
               </div>
             </div>
             <div className='flex flex-row'>
               <IconBrandTelegram size={64} className='text-redprimary'/>
               <div className='flex flex-col items-start justify-start'>
-              <p className='md:text-xl xl:text-2xl font-normal text-start'>Canal en Telegram</p>
-              <p style={{fontStyle: 'italic'}}>Grupo Informativo</p>
+                <a href='https://t.me/olatviptv' target='_blank' className='hover:text-redprimary'>
+                  <p className='md:text-xl xl:text-2xl font-normal text-start'>Canal en Telegram</p>
+                  <p style={{fontStyle: 'italic'}}>Grupo Informativo</p>
+                </a>
               </div>
             </div>
             <div className='flex flex-row'>
               <IconBrandWhatsapp size={64} className='text-redprimary'/>
               <div className='flex flex-col items-start justify-start'>
-              <p className='md:text-xl xl:text-2xl font-normal text-start'>WhatsApp</p>
-              <p style={{fontStyle: 'italic'}}>Online de Lunes a Viernes</p>
+                <a href='https://api.whatsapp.com/send/?phone=+584244632518&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20servicios%3F' target='_blank' className='hover:text-redprimary'>
+                  <p className='md:text-xl xl:text-2xl font-normal text-start'>WhatsApp</p>
+                  <p style={{fontStyle: 'italic'}}>Online de Lunes a Viernes</p>
+                </a>
               </div>
             </div>
           </div>
