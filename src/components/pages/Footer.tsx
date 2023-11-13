@@ -17,7 +17,7 @@ export const Footer = () => {
               </p>
             </p>
           </div>
-          <div className='mb-12 xl:mb-20 flex flex-col xl:flex-row gap-4 lg:gap:16 xl:gap-32'>
+          <div className='mb-12 xl:mb-20 flex flex-wrap justify-center xl:flex-row gap-4 lg:gap:16 xl:gap-32'>
             <div className='flex flex-row'>
               <IconBrandInstagram size={64} className='text-redprimary'/>
               <div className='flex flex-col items-start justify-center'>

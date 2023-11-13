@@ -187,7 +187,6 @@ export const InicioPage = () => {
           <CustomSplide id="splideChannels" perPage={9} extraClass={`my-3`} images={imagesChannels} />
           
         </div>
-        
         {/* DEPORTES Y LIGAS */}
         <div className='mt-8 mb-6'>
           <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
@@ -346,7 +345,7 @@ export const InicioPage = () => {
           </div>
         </div>
         {/* Planes Reseller */}
-        <div className="space-y-4 px-6 xl:px-64" id='reseller'>
+        <div className="space-y-4 px-6 lg:px-32 xl:px-48 2xl:px-64" id='reseller'>
           <div className='my-24' id='paquetes'>
             <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
               <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>
@@ -558,7 +557,7 @@ export const InicioPage = () => {
           </div>
         </div>
         {/* FAQs */}
-        <div className="space-y-4 px-6 sm:px-16 md:px-32 xl:px-64 mt-12" id='faqs'>
+        <div className="space-y-4 px-6 sm:px-8 md:px-16 xl:px-64 mt-12" id='faqs'>
           <div className='my-24'>
             <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
                 <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>
