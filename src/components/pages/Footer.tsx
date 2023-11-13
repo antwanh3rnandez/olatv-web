@@ -58,7 +58,7 @@ export const Footer = () => {
         </div>
         <div className='mb-12 flex flex-col justify-center items-center'>
           <div className='px-8 xl:w-1/2 mb-8'>
-            <p style={{fontStyle: 'normal'}} className='text-center'>
+            <p style={{fontFamily: 'Poppins'}} className='text-center'>
               El tiempo de respuesta en nuestros canales informativos o de comunicación, incluyendo nuestro correo corporativo puede variar en cada país. El horario de atención permanente es de Lunes a Viernes. Los días Sábados y Domingos el tiempo de respuesta puede variar dependiendo de la disponibilidad de agentes, sin estar sujetos a un horario determinado.
             </p>
           </div>
