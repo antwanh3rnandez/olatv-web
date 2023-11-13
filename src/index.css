@@ -53,10 +53,6 @@
   opacity: 1;
 }
 
-.normal-menu {
-  z-index: 1;
-}
-
 .logo-container {
   position: fixed;
   display: flex;
@@ -70,7 +66,7 @@
   opacity: 10%;
   background-color: transparent; /* Puedes ajustar el color de fondo según tus necesidades */
   box-sizing: border-box;
-  z-index: -9999; /* Un valor menor que el z-index del contenido para que esté por debajo */
+  z-index: -1; /* Un valor menor que el z-index del contenido para que esté por debajo */
 }
 
 .logo-container img {

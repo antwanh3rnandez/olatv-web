@@ -23,7 +23,10 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 
 import { 
-  IconCheck, 
+  IconBrandInstagram,
+  IconCheck,
+  IconDeviceMobileShare,
+  IconPhone, 
 } from '@tabler/icons-react/';
 
 import { Footer } from '../../components/pages/Footer';
@@ -154,11 +157,11 @@ export const InicioPage = () => {
           >
             <div className="w-full h-full flex flex-col items-center justify-center">
                 <h2 className="hero-text">
-                  El mejor servidor de IPTV Estable y Variante
+                  El mejor servicio de IPTV Estable y Variado
                 </h2>
               <div className="mt-[12px]">
                 <h2 className="hero-text-sub">
-                Vea sus Deportes y Películas Favoritas con el Mejor Suscripción a IPTV | Más de 2 000 Canales en <br></br> Vivo con una Calidad Impresionante de 4K/FHD/HD | Obtenga Acceso Ilimitado a la Biblioteca VOD <br></br> con las Últimas Películas y Series | Regístrese Ahora para Obtener Descuentos Exclusivos y Soporte 24/7
+                Disfruta de tus Deportes y Películas Favoritas con la Mejor Suscripción a IPTV | Más de 2 000 Canales en <br></br> Vivo con una Calidad Impresionante de 4K/FHD/HD | Obtenga Acceso Ilimitado a la Biblioteca VOD <br></br> con las Últimas Películas y Series | Regístrese Ahora para Obtener Descuentos Exclusivos y Soporte 24/7
                 </h2>
               </div>
               <div className="mt-[24px]">
@@ -202,8 +205,8 @@ export const InicioPage = () => {
         </div>
         <CustomSplide id="splideLeagues" perPage={7} extraClass={`my-3`} images={imagesLeagues} />
         {/* Planes Detalle */}
-        <div className="flex-1 space-y-4 px-6 sm:px-16 md:px-32 lg:px-64 mt-[48px]">
-          <div className='my-8' id='paquetes'>
+        <div className="flex-1 space-y-4 px-6 sm:px-16 md:px-32 lg:px-64 mt-[48px]"  id='paquetes'>
+          <div className='my-8'>
             <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
               <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>
                 Nuestras Promociones
@@ -346,7 +349,7 @@ export const InicioPage = () => {
         </div>
         {/* Planes Reseller */}
         <div className="space-y-4 px-6 lg:px-32 xl:px-48 2xl:px-64" id='reseller'>
-          <div className='my-24' id='paquetes'>
+          <div className='my-24'>
             <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
               <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>
                 ¿Desea obtener ganancias?
@@ -556,9 +559,156 @@ export const InicioPage = () => {
             </div>
           </div>
         </div>
+        {/* Distribuidores */}
+        <div className="space-y-4 px-6 lg:px-32 xl:px-48 2xl:px-64" id='distribuidores'>
+          <div className='my-24'>
+            <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
+              <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>
+                Distribuidores Oficiales
+              </p>
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-6">
+              {/* Centro del Pais */}
+              <Card className="p-6 text-center rounded-xl hover:shadow-2xl"> 
+                <CardTitle>
+                  <p className='text-2xl text-center' style={{fontFamily: 'Poppins'}}>
+                    <p style={{fontStyle: 'normal'}}>
+                      Centro del País
+                    </p>
+                  </p>
+                </CardTitle>
+                <Card className='mt-4 p-4 hover:shadow-md flex flex-col items-center justify-center' style={{fontFamily: 'Poppins'}}>
+                  <p className='mb-2 text-xl text-center' style={{fontFamily: 'Poppins'}}>
+                    <p style={{fontStyle: 'normal'}}>
+                      Mega Ventas Vzla
+                    </p>
+                  </p>
+                  <div className='flex space-x-2 flex-wrap items-center justify-center'>
+                    <a href='https://www.instagram.com/mega.ventavzla' target='_blank' className='hover:underline'>
+                      <div className='flex flex-col items-center justify-center'>
+                          <IconBrandInstagram size={48} className='text-redprimary' />
+                          <p className='mt-2'>@mega.ventavzla</p>
+                      </div>
+                    </a>
+                    <a href='tel:+584244383791' target='' className='hover:underline'>
+                      <div className='flex flex-col items-center justify-center'>
+                        <IconPhone size={48} className='text-redprimary'/>
+                        <p className='mt-2'>+58424-4383791</p> 
+                      </div>
+                    </a>
+                  </div>
+                </Card>
+                <Card className='mt-4 p-4 hover:shadow-md flex flex-col items-center justify-center' style={{fontFamily: 'Poppins'}}>
+                  <p className='mb-2 text-xl text-center' style={{fontFamily: 'Poppins'}}>
+                    <p style={{fontStyle: 'normal'}}>
+                      K&G Technology
+                    </p>
+                  </p>
+                  <div className='flex space-x-2 flex-wrap items-center justify-center'>
+                    <a href='https://www.instagram.com/kgtechnology' target='_blank' className='hover:underline'>
+                      <div className='flex flex-col items-center justify-center'>
+                          <IconBrandInstagram size={48} className='text-redprimary' />
+                          <p className='mt-2'>@kgtechnology</p>
+                      </div>
+                    </a>
+                    <a href='tel:+584243103540 ' target='' className='hover:underline'>
+                      <div className='flex flex-col items-center justify-center'>
+                        <IconPhone size={48} className='text-redprimary'/>
+                        <p className='mt-2'>+58424-3103540 </p> 
+                      </div>
+                    </a>
+                  </div>
+                </Card>
+              </Card>
+              {/* Oriente del Pais */}
+              <Card className="p-6 text-center rounded-xl hover:shadow-2xl"> 
+                <CardTitle>
+                  <p className='text-2xl text-center' style={{fontFamily: 'Poppins'}}>
+                    <p style={{fontStyle: 'normal'}}>
+                      Oriente del País
+                    </p>
+                  </p>
+                </CardTitle>
+                <Card className='mt-4 p-4 hover:shadow-md flex flex-col items-center justify-center' style={{fontFamily: 'Poppins'}}>
+                  <p className='mb-2 text-xl text-center' style={{fontFamily: 'Poppins'}}>
+                    <p style={{fontStyle: 'normal'}}>
+                      Mas 58 Shop Maturin
+                    </p>
+                  </p>
+                  <div className='flex space-x-2 flex-wrap items-center justify-center'>
+                    <a href='https://www.instagram.com/mas58shopmaturin' target='_blank' className='hover:underline'>
+                      <div className='flex flex-col items-center justify-center'>
+                          <IconBrandInstagram size={48} className='text-redprimary' />
+                          <p className='mt-2'>@mas58shopmaturin</p>
+                      </div>
+                    </a>
+                    <a href='tel:+584149958402' className='hover:underline'>
+                      <div className='flex flex-col items-center justify-center'>
+                        <IconPhone size={48} className='text-redprimary'/>
+                        <p className='mt-2'>+58414-9958402</p> 
+                      </div>
+                    </a>
+                  </div>
+                </Card>
+              </Card>
+              {/* Distrito Federal */}
+              <Card className="p-6 text-center rounded-xl hover:shadow-2xl"> 
+                <CardTitle>
+                  <p className='text-2xl text-center' style={{fontFamily: 'Poppins'}}>
+                    <p style={{fontStyle: 'normal'}}>
+                      Distrito Federal
+                    </p>
+                  </p>
+                </CardTitle>
+                <Card className='mt-4 p-4 hover:shadow-md flex flex-col items-center justify-center' style={{fontFamily: 'Poppins'}}>
+                  <p className='mb-2 text-xl text-center' style={{fontFamily: 'Poppins'}}>
+                    <p style={{fontStyle: 'normal'}}>
+                      Aparatikus C.A
+                    </p>
+                  </p>
+                  <div className='flex space-x-2 flex-wrap items-center justify-center'>
+                    <a href='https://www.instagram.com/aparatikusvzla ' target='_blank' className='hover:underline'>
+                      <div className='flex flex-col items-center justify-center'>
+                          <IconBrandInstagram size={48} className='text-redprimary' />
+                          <p className='mt-2'>@aparatikusvzla</p>
+                      </div>
+                    </a>
+                    <a href='tel:+584125924995' className='hover:underline'>
+                      <div className='flex flex-col items-center justify-center'>
+                        <IconPhone size={48} className='text-redprimary'/>
+                        <p className='mt-2'>+58412-5924995 </p> 
+                      </div>
+                    </a>
+                  </div>
+                </Card>
+                <Card className='mt-4 p-4 hover:shadow-md flex flex-col items-center justify-center' style={{fontFamily: 'Poppins'}}>
+                  <p className='mb-2 text-xl text-center' style={{fontFamily: 'Poppins'}}>
+                    <p style={{fontStyle: 'normal'}}>
+                      Mega Ventas La Guaira 
+                    </p>
+                  </p>
+                  <div className='flex space-x-2 flex-wrap items-center justify-center'>
+                    <a href='https://www.instagram.com/megaventaslgr' target='_blank' className='hover:underline'>
+                      <div className='flex flex-col items-center justify-center'>
+                          <IconBrandInstagram size={48} className='text-redprimary' />
+                          <p className='mt-2'>@megaventaslgr</p>
+                      </div>
+                    </a>
+                    <a href='tel:+584141071910' className='hover:underline'>
+                      <div className='flex flex-col items-center justify-center'>
+                        <IconPhone size={48} className='text-redprimary'/>
+                        <p className='mt-2'>+58414-1071910</p> 
+                      </div>
+                    </a>
+                  </div>
+                </Card>
+              </Card>
+            </div>
+          </div>
+        </div>
         {/* FAQs */}
         <div className="space-y-4 px-6 sm:px-8 md:px-16 xl:px-64 mt-12" id='faqs'>
-          <div className='my-24'>
+          <div className='my-32'>
             <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
                 <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>
                   Preguntas Frecuentes
