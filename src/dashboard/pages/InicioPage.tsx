@@ -567,7 +567,7 @@ export const InicioPage = () => {
                 Distribuidores Oficiales
               </p>
             </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-6">
+            <div className="mt-8 flex flex-wrap justify-center items-center gap-6">
               {/* Centro del Pais */}
               <Card className="p-6 text-center rounded-xl hover:shadow-2xl"> 
                 <CardTitle>
