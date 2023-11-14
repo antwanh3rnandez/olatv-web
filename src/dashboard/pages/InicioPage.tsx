@@ -64,6 +64,30 @@ const faqs = [
   },
 ];
 
+const imagesMovies: string[] = [];
+
+  for (let i = 1; i <= 11; i++) {
+    const imagePath = `../../assets/movies-slide/${i}.webp`;
+    const { default: movieImage } = await import(imagePath);
+    imagesMovies.push(movieImage);
+  }
+
+const imagesChannels: string[] = [];
+
+  for (let i = 1; i <= 29; i++) {
+    const imagePath = `../../assets/channels-slide/${i}.webp`;
+    const { default: channelImage } = await import(imagePath);
+    imagesChannels.push(channelImage);
+  }
+
+const imagesLeagues: string[] = [];
+
+  for (let i = 1; i <= 15; i++) {
+    const imagePath = `../../assets/leagues-slide/${i}.webp`;
+    const { default: leagueImage } = await import(imagePath);
+    imagesLeagues.push(leagueImage);
+  }
+
 function CustomSplide({ id, images, extraClass, perPage }) {
 
   return (
@@ -89,62 +113,15 @@ function CustomSplide({ id, images, extraClass, perPage }) {
   );
 }
 
+
+
 export const InicioPage = () => {
 
-  const [imagesMovies, setImagesMovies] = useState<string[]>([]); 
-  useEffect(() => {
-    const loadImagesMovie = async () => {
-      const imageImports: string[] = [];
+  // Obtén el estado actual del tema usando el hook useTheme
+  const { theme } = useTheme();
 
-      for (let i = 1; i <= 13; i++) {
-        const { default: image } = await import(`../../assets/movies-slide/${i}.webp`);
-        imageImports.push(image);
-      }
-
-      setImagesMovies(imageImports);
-    };
-
-    loadImagesMovie();
-  }, []);
-
-  const [imagesChannels, setImagesChannels] = useState<string[]>([]); 
-  useEffect(() => {
-    const loadImagesChannels = async () => {
-      const imageImports: string[] = [];
-
-      for (let i = 1; i <= 16; i++) {
-        const { default: image } = await import(`../../assets/channels-slide/${i}.webp`);
-        imageImports.push(image);
-      }
-
-      setImagesChannels(imageImports);
-    };
-
-    loadImagesChannels();
-  }, []);
-
-  const [imagesLeagues, setImagesLeagues] = useState<string[]>([]); 
-  useEffect(() => {
-    const loadImagesLeagues = async () => {
-      const imageImports: string[] = [];
-
-      for (let i = 1; i <= 14; i++) {
-        const { default: image } = await import(`../../assets/leagues-slide/${i}.webp`);
-        imageImports.push(image);
-      }
-
-      setImagesLeagues(imageImports);
-    };
-
-    loadImagesLeagues();
-  }, []);
-
-    // Obtén el estado actual del tema usando el hook useTheme
-    const { theme } = useTheme();
-
-    // Determina qué logo utilizar según el tema
-    const logo = theme === "dark" ? logoDark : logoLight;
-
+  // Determina qué logo utilizar según el tema
+  const logo = theme === "dark" ? logoDark : logoLight;
 
   return (
     <div className="flex-col md:flex" id='inicio'>
