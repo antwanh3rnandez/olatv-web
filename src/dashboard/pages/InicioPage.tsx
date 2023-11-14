@@ -27,7 +27,6 @@ import '@splidejs/react-splide/css';
 import { 
   IconBrandInstagram,
   IconCheck,
-  IconDeviceMobileShare,
   IconPhone, 
 } from '@tabler/icons-react/';
 
@@ -47,7 +46,7 @@ const faqs = [
   {
     id: 3,
     question: '¿CUALES SON LOS MÉTODOS DE PAGOS DISPONIBLES?',
-    answer: 'Contamos con una gran variedad de métodos de pago. Transferencia bancaria en Mexico, Colombia, Ecuador, Panama, Peru y Venezuela. También aceptamos procesadores de pago: Tarjeta de Crédito, PayPal, Zelle y Binance Pay.',
+    answer: 'Entre nuestas modalidades de pago, se encuentran Transferencias Bancarias (Solo Venezuela), Internacional: Bianance Pay, PayPal, Zelle y USDT',
   },
   {
     id: 4,

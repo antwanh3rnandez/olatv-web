@@ -2,6 +2,7 @@ import { ReactNode, useState, useEffect, useMemo } from "react";
 import { useTheme } from "../components/ThemeProvider"
 import { ModeToggle } from "../components/ToggleDarkMode";
 import { ScrollToTopButton } from "../components/ScrollToTopButton";
+import avatar from '../assets/avatar.png';
 import logoLight from '../assets/olatv-logo.png';
 import logoDark from '../assets/olatv-logo-white.png';
 import { IconMenu2 } from "@tabler/icons-react";
@@ -144,7 +145,7 @@ export const DashboardLayout = ({ children }: { children: ReactNode }) => {
                     spy={true}
                     offset={-50}
                     duration={500}
-                    className={`block pl-6 xl:text-md font-normal text-primary capitalize transition-colors hover:text-muted-foreground`}
+                    className={`block pl-6 xl:text-md font-normal capitalize transition-colors hover:text-primary ${activeSection === option.path ? "text-redprimary dark:text-redprimary" : "text-muted-foreground"}`}
                     onClick={closeMobileMenu}
                     style={{fontFamily: 'Lexend'}}
                   >
@@ -166,6 +167,7 @@ export const DashboardLayout = ({ children }: { children: ReactNode }) => {
             chatMessage="Hola, Como podemos ayudarte hoy? 🤝"
             placeholder='Escribe un mensaje...'
             chatboxStyle={{color: 'black'}}
+            avatar={avatar}
           />
         <ScrollToTopButton />
       </main>
