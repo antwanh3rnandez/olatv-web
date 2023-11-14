@@ -114,7 +114,7 @@ export const InicioPage = () => {
                 </h2>
               <div className="mt-[12px]">
                 <h2 className="hero-text-sub">
-                Disfruta de tus Deportes y Películas Favoritas con la Mejor Suscripción a IPTV | Más de 2 000 Canales en <br></br> Vivo con una Calidad Impresionante de 4K/FHD/HD | Obtenga Acceso Ilimitado a la Biblioteca VOD <br></br> con las Últimas Películas y Series | Regístrese Ahora para Obtener Descuentos Exclusivos y Soporte 24/7
+                Disfruta de tus Deportes y Películas Favoritas con la Mejor Suscripción a IPTV | Más de 2,000 Canales en <br></br> Vivo con una Calidad Impresionante de 4K/FHD/HD | Obtenga Acceso Ilimitado a la Biblioteca VOD <br></br> con las Últimas Películas y Series | Regístrese Ahora para Obtener Descuentos Exclusivos y Soporte 24/7
                 </h2>
               </div>
               <div className="mt-[24px]">
