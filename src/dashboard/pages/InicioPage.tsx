@@ -1,16 +1,5 @@
-import { useEffect, useState } from 'react';
-import { useTheme } from "../../components/ThemeProvider"
-import logoLight from '../../assets/olatv-logo.png';
-import logoDark from '../../assets/olatv-logo-white.png';
-import screenshot1 from '../../assets/screenshot1.jpeg';
-import screenshot2 from '../../assets/screenshot2.jpeg';
-
-import screenshot4 from '../../assets/screenshot4.png';
 import { 
   Card, 
-  CardContent, 
-  CardDescription, 
-  CardHeader, 
   CardTitle 
 } from "../../components/ui/card"
 import {
@@ -19,21 +8,25 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../../components/ui/accordion"
-
 import { Button } from "../../components/ui/button"
-import hero from "../../assets/familia2.jpg"
-
-import { imagesMovies, imagesChannels, imagesLeagues } from '../../hooks/useImagesImport';
-
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/react-splide/css';
-
 import { 
   IconBrandInstagram,
+  IconBrandTelegram,
+  IconBrandWhatsapp,
   IconCheck,
-  IconDownload,
   IconPhone, 
 } from '@tabler/icons-react/';
+
+import { useTheme } from "../../components/ThemeProvider"
+import { CustomSplide } from "../../components/CustomSplide"
+import hero from "../../assets/familia2.jpg"
+import logoLight from '../../assets/olatv-logo.png';
+import logoDark from '../../assets/olatv-logo-white.png';
+import screenshot1 from '../../assets/screenshot1.png';
+import screenshot2 from '../../assets/screenshot2.png';
+import screenshot3 from '../../assets/screenshot3.png';
+import screenshot4 from '../../assets/screenshot4.png';
+import { imagesMovies, imagesChannels, imagesLeagues } from '../../hooks/useImagesImport';
 
 import { Footer } from '../../components/pages/Footer';
 
@@ -70,30 +63,7 @@ const faqs = [
   },
 ];
 
-function CustomSplide({ id, images, extraClass, perPage }) {
 
-  return (
-    <Splide
-      id={id}
-      className={extraClass}
-      options={{
-        type: 'loop',
-        perPage: perPage,
-        perMove: 1,
-        pagination: false,
-        autoplay: true, // Utilizar directamente la opción autoplay
-      interval: 2000, // Puedes ajustar el intervalo entre diapositivas aquí
-        speed: 1000,
-      }}
-    >
-      {images.map((image, index) => (
-        <SplideSlide key={index} id={`${id}-slide${index}`}>
-          <img src={image} alt={`Image ${index + 1}`} />
-        </SplideSlide>
-      ))}
-    </Splide>
-  );
-}
 
 export const InicioPage = () => {
 
@@ -664,37 +634,6 @@ export const InicioPage = () => {
             </div>
           </div>
         </div>
-        {/* FAQs */}
-        <div className="space-y-4 px-6 sm:px-8 md:px-16 xl:px-64 mt-12" id='faqs'>
-          <div className='my-32'>
-            <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
-                <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>
-                  Preguntas Frecuentes
-                </p>
-              </p>
-              <p className='text-xl text-center' style={{fontFamily: 'Poppins'}}>
-                <p style={{fontStyle: 'normal'}}>
-                  Estas son algunas de las preguntas mas realizadas por nuestros clientes
-                </p>
-              </p>
-              <div className='mt-8 xl:mx-2 2xl:px-24'>
-                <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-                  {faqs.map((faq, index) => (
-                    <Accordion type="single" collapsible className="w-full text-start" style={{fontFamily: 'Poppins'}}>
-                      <AccordionItem key={index} value={`item-${faq.id}`}>
-                        <AccordionTrigger className='text-start'>
-                          <p>{faq.question}</p>
-                        </AccordionTrigger>
-                        <AccordionContent>
-                        <p>{faq.answer}</p>
-                        </AccordionContent>
-                      </AccordionItem>
-                    </Accordion>
-                  ))}
-                </div>
-            </div>
-          </div>
-        </div>
         {/* Descargas */}
         <div className="space-y-4 px-6 sm:px-8 md:px-16 xl:px-48 mt-12" id='descargas'>
           <div className='my-32'>
@@ -787,7 +726,7 @@ export const InicioPage = () => {
                     </p>
                   </p>
                   <div className='flex space-x-2 flex-col items-center justify-center'>
-                    <img src={screenshot2} className='mb-2 w-96' />
+                    <img src={screenshot3} className='mb-2 w-96' />
                     <a className='mb-2' href='https://n9.cl/olatv' target='_blank'>
                       <div className='flex flex-col items-center justify-center'>
                         <Button className='bg-redprimary'>
@@ -833,6 +772,83 @@ export const InicioPage = () => {
                   </div>
                 </Card>
               </Card>
+            </div>
+          </div>
+        </div>
+        {/* Contacto */}
+        <div className='px-8 flex flex-col justify-center items-center' id='contacto'>
+          <div className='xl:w-1/2 mb-12 xl:mb-20'>
+            <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
+              <p style={{fontStyle: 'normal'}} className='text-redprimary'>
+                Mantente informado de nuevas actualizaciones en nuestros canales informativos.
+              </p>
+            </p>
+          </div>
+          <div className='mb-12 xl:mb-20 flex flex-wrap justify-center xl:flex-row gap-4 lg:gap:16 xl:gap-32'>
+            <a href='https://www.instagram.com/olatv_oficial' target='_blank' className='hover:text-redprimary'>
+              <div className='flex flex-row'>
+                <IconBrandInstagram size={64} className='text-redprimary'/>
+                <div className='flex flex-col items-start justify-center'>
+                    <p className='md:text-xl xl:text-2xl font-normal text-start'>Instagram Fanpage</p>
+                    <p style={{fontStyle: 'italic'}}>Instagram Oficial</p>
+                </div>
+              </div>
+            </a>
+            <a href='https://t.me/olatviptv' target='_blank' className='hover:text-redprimary'>
+              <div className='flex flex-row'>
+                <IconBrandTelegram size={64} className='text-redprimary'/>
+                <div className='flex flex-col items-start justify-start'>
+                    <p className='md:text-xl xl:text-2xl font-normal text-start'>Canal en Telegram</p>
+                    <p style={{fontStyle: 'italic'}}>Grupo Informativo</p>
+                </div>
+              </div>
+            </a>
+            <a href='https://api.whatsapp.com/send/?phone=+584244632518&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20servicios%3F' target='_blank' className='hover:text-redprimary'>
+              <div className='flex flex-row'>
+                <IconBrandWhatsapp size={64} className='text-redprimary'/>
+                <div className='flex flex-col items-start justify-start'>
+                    <p className='md:text-xl xl:text-2xl font-normal text-start'>WhatsApp</p>
+                    <p style={{fontStyle: 'italic'}}>Online de Lunes a Domingo</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div className='mb-12 flex flex-col justify-center items-center'>
+          <div className='px-8 xl:w-1/2 mb-8'>
+            <p style={{fontFamily: 'Poppins'}} className='text-center'>
+              El tiempo de respuesta en nuestros canales informativos o de comunicación, incluyendo nuestro correo corporativo puede variar en cada país. El horario de atención permanente es de Lunes a Viernes. Los días Sábados y Domingos el tiempo de respuesta puede variar dependiendo de la disponibilidad de agentes, sin estar sujetos a un horario determinado.
+            </p>
+          </div>
+        </div>
+        {/* FAQs */}
+        <div className="space-y-4 px-6 sm:px-8 md:px-16 xl:px-64 mt-12" id='faqs'>
+          <div className='my-32'>
+            <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
+                <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>
+                  Preguntas Frecuentes
+                </p>
+              </p>
+              <p className='text-xl text-center' style={{fontFamily: 'Poppins'}}>
+                <p style={{fontStyle: 'normal'}}>
+                  Estas son algunas de las preguntas mas realizadas por nuestros clientes
+                </p>
+              </p>
+              <div className='mt-8 xl:mx-2 2xl:px-24'>
+                <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                  {faqs.map((faq, index) => (
+                    <Accordion type="single" collapsible className="w-full text-start" style={{fontFamily: 'Poppins'}}>
+                      <AccordionItem key={index} value={`item-${faq.id}`}>
+                        <AccordionTrigger className='text-start'>
+                          <p>{faq.question}</p>
+                        </AccordionTrigger>
+                        <AccordionContent>
+                        <p>{faq.answer}</p>
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
+                  ))}
+                </div>
             </div>
           </div>
         </div>
