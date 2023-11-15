@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react';
 import { useTheme } from "../../components/ThemeProvider"
 import logoLight from '../../assets/olatv-logo.png';
 import logoDark from '../../assets/olatv-logo-white.png';
+import screenshot1 from '../../assets/screenshot1.jpeg';
+import screenshot2 from '../../assets/screenshot2.jpeg';
+
+import screenshot4 from '../../assets/screenshot4.png';
 import { 
   Card, 
   CardContent, 
@@ -27,6 +31,7 @@ import '@splidejs/react-splide/css';
 import { 
   IconBrandInstagram,
   IconCheck,
+  IconDownload,
   IconPhone, 
 } from '@tabler/icons-react/';
 
@@ -687,6 +692,147 @@ export const InicioPage = () => {
                     </Accordion>
                   ))}
                 </div>
+            </div>
+          </div>
+        </div>
+        {/* Descargas */}
+        <div className="space-y-4 px-6 sm:px-8 md:px-16 xl:px-48 mt-12" id='descargas'>
+          <div className='my-32'>
+            <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
+              <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>
+                Descarga de Aplicaciones
+              </p>
+            </p>
+            <p className='text-xl text-center' style={{fontFamily: 'Poppins'}}>
+              <p style={{fontStyle: 'normal'}}>
+                Aquí encontrará todas nuestras aplicaciones para todas las plataformas disponibles
+              </p>
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center items-center gap-6">
+              {/* Ola TV Smart */}
+              <Card className="p-6 text-center rounded-xl hover:shadow-2xl"> 
+                <CardTitle>
+                  <p className='text-2xl text-center' style={{fontFamily: 'Poppins'}}>
+                    <p style={{fontStyle: 'normal'}}>
+                      Ola Tv Smart
+                    </p>
+                  </p>
+                </CardTitle>
+                <Card className='mt-4 p-4 hover:shadow-md flex flex-col items-center justify-center' style={{fontFamily: 'Poppins'}}>
+                  <p className='mb-2 text-xl text-center' style={{fontFamily: 'Poppins'}}>
+                    <p style={{fontStyle: 'normal'}}>
+                      (Recomendada) 
+                    </p>
+                  </p>
+                  <div className='flex space-x-2 flex-col items-center justify-center'>
+                    <img src={screenshot1} className='mb-2 w-96' />
+                    <a className='mb-2' href='https://bit.ly/Ola-TV' target='_blank'>
+                      <div className='flex flex-col items-center justify-center'>
+                        <Button className='bg-redprimary'>
+                            <p>Descargar</p>
+                        </Button>
+                      </div>
+                    </a>
+                    <div className='mb-2 flex flex-col items-center justify-center'>
+                      <p className='mb-2'>Codigo Downloader</p> 
+                      <p className='text-lg text-redprimary'>770568</p> 
+                    </div>
+                  </div>
+                </Card>
+              </Card>
+              {/* Ola Tv Flix  */}
+              <Card className="p-6 text-center rounded-xl hover:shadow-2xl"> 
+                <CardTitle>
+                  <p className='text-2xl text-center' style={{fontFamily: 'Poppins'}}>
+                    <p style={{fontStyle: 'normal'}}>
+                      Ola Tv Flix
+                    </p>
+                  </p>
+                </CardTitle>
+                <Card className='mt-4 p-4 hover:shadow-md flex flex-col items-center justify-center' style={{fontFamily: 'Poppins'}}>
+                  <p className='mb-2 text-xl text-center' style={{fontFamily: 'Poppins'}}>
+                    <p style={{fontStyle: 'normal'}}>
+                      (Sugerida para  películas y series)
+                    </p>
+                  </p>
+                  <div className='flex space-x-2 flex-col items-center justify-center'>
+                    <img src={screenshot2} className='mb-2 w-96' />
+                    <a className='mb-2' href='https://n9.cl/h5z9d' target='_blank'>
+                      <div className='flex flex-col items-center justify-center'>
+                        <Button className='bg-redprimary'>
+                            <p>Descargar</p>
+                        </Button>
+                      </div>
+                    </a>
+                    <div className='mb-2 flex flex-col items-center justify-center'>
+                      <p className='mb-2'>Codigo Downloader</p> 
+                      <p className='text-lg text-redprimary'>428243</p> 
+                    </div>
+                  </div>
+                </Card>
+              </Card>
+              {/* Ola Tv Xteam */}
+              <Card className="p-6 text-center rounded-xl hover:shadow-2xl"> 
+                <CardTitle>
+                  <p className='text-2xl text-center' style={{fontFamily: 'Poppins'}}>
+                    <p style={{fontStyle: 'normal'}}>
+                      Ola Tv Xteam
+                    </p>
+                  </p>
+                </CardTitle>
+                <Card className='mt-4 p-4 hover:shadow-md flex flex-col items-center justify-center' style={{fontFamily: 'Poppins'}}>
+                  <p className='mb-2 text-xl text-center' style={{fontFamily: 'Poppins'}}>
+                    <p style={{fontStyle: 'normal'}}>
+                      (Sugerida para  películas y series)
+                    </p>
+                  </p>
+                  <div className='flex space-x-2 flex-col items-center justify-center'>
+                    <img src={screenshot2} className='mb-2 w-96' />
+                    <a className='mb-2' href='https://n9.cl/olatv' target='_blank'>
+                      <div className='flex flex-col items-center justify-center'>
+                        <Button className='bg-redprimary'>
+                            <p>Descargar</p>
+                        </Button>
+                      </div>
+                    </a>
+                    <div className='mb-2 flex flex-col items-center justify-center'>
+                      <p className='mb-2'>Codigo Downloader</p> 
+                      <p className='text-lg text-redprimary'>668785</p> 
+                    </div>
+                  </div>
+                </Card>
+              </Card>
+              {/* Reproductor Web: */}
+              <Card className="p-6 text-center rounded-xl hover:shadow-2xl"> 
+                <CardTitle>
+                  <p className='text-2xl text-center' style={{fontFamily: 'Poppins'}}>
+                    <p style={{fontStyle: 'normal'}}>
+                      Reproductor Web:
+                    </p>
+                  </p>
+                </CardTitle>
+                <Card className='mt-4 p-4 hover:shadow-md flex flex-col items-center justify-center' style={{fontFamily: 'Poppins'}}>
+                  <p className='mb-2 text-xl text-center' style={{fontFamily: 'Poppins'}}>
+                    <p style={{fontStyle: 'normal'}}>
+                      (Multiplataforma)
+                    </p>
+                  </p>
+                  <div className='flex space-x-2 flex-col items-center justify-center'>
+                    <img src={screenshot4} className='mb-2 w-96' />
+                    <a className='mb-2' href='http://web-players.xyz/olatv/' target='_blank'>
+                      <div className='flex flex-col items-center justify-center'>
+                        <Button className='bg-redprimary'>
+                            <p>Ingresar</p>
+                        </Button>
+                      </div>
+                    </a>
+                    <div className='mb-2 flex flex-col items-center justify-center'>
+                      <p className='mb-2'>Portal Web</p> 
+                      <p className='text-lg text-redprimary'>http://web-players.xyz/olatv/</p> 
+                    </div>
+                  </div>
+                </Card>
+              </Card>
             </div>
           </div>
         </div>
