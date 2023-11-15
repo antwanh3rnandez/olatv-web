@@ -20,6 +20,7 @@ import {
 import { useTheme } from "../../components/ThemeProvider"
 import { CustomSplide } from "../../components/CustomSplide"
 import hero from "../../assets/familia2.jpg"
+import callToActionBG from "../../assets/bg.png"
 import logoLight from '../../assets/olatv-logo.png';
 import logoDark from '../../assets/olatv-logo-white.png';
 import screenshot1 from '../../assets/screenshot1.png';
@@ -133,7 +134,7 @@ export const InicioPage = () => {
         </div>
         <CustomSplide id="splideLeagues" perPage={7} extraClass={`my-3`} images={imagesLeagues} />
         {/* Planes Detalle */}
-        <div className="flex-1 space-y-4 px-6 sm:px-16 md:px-32 lg:px-64 mt-[48px]"  id='paquetes'>
+        <div className="space-y-4 px-6 sm:px-16 md:px-32 lg:px-64 mt-[48px]"  id='paquetes'>
           <div className='my-8'>
             <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
               <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>
@@ -272,6 +273,30 @@ export const InicioPage = () => {
                       </a>
                   </div>
               </Card>           
+            </div>
+          </div>
+        </div>
+        {/* Call to Action */}
+        <div className="my-24">
+          <div className="relative h-40 xl:h-48">
+            <img className="w-full h-full object-cover" src={callToActionBG} />
+            <div className="absolute inset-0 flex flex-col items-center justify-center">
+              <div
+                className="w-full h-full bg-black bg-opacity-50 text-white text-center p-3"
+                style={{ backdropFilter: 'blur(0px)' }}
+              >
+                <div className="w-full h-full flex flex-wrap xl:flex-row space-y-0 xl:space-x-8 items-center justify-center">
+                  <h2 className="flex flex-col md:text-2xl lg:text-3xl xl:text-4xl" style={{fontFamily: 'Lexend'}}>
+                    <p className='font-extralight'>Compruebe por usted mismo la calidad de nuestro servicio </p>
+                    <em>¡Obtenga su demo ahora!</em>
+                  </h2>
+                  <div className="flex flex-col items-center justify-center">
+                    <a href='https://api.whatsapp.com/send/?phone=+584244632518&text=Hola%20que%20tal%2C%20%C2%BFMe%20podr%C3%ADan%20generar%20un%20demo%3F%20por%20favor.' target="_blank">
+                      <Button className='bg-redprimary rounded-md px-6 py-4 uppercase hover:bg-red-900 text-black dark:text-white'>Solicitar Demo</Button>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
