@@ -35,3 +35,6 @@ coverage/
 
 # Archivos de caché
 .cache/
+
+#Archivos de mac
+.DS_Store
