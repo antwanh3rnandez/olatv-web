@@ -164,7 +164,7 @@ export const DashboardLayout = ({ children }: { children: ReactNode }) => {
             phoneNumber='+56928875143'
             accountName='InterTV VIP'
             statusMessage='Normalmente responde en algunos segundos'
-            chatMessage="Hola, Como podemos ayudarte hoy? 🤝"
+            chatMessage="Hola, Tenemos promociones para ti, pregunta aquí 👇🏻"
             placeholder='Escribe un mensaje...'
             chatboxStyle={{color: 'black'}}
             avatar={avatar}

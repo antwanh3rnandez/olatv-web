@@ -45,7 +45,7 @@ const faqs = [
   {
     id: 3,
     question: '¿CUALES SON LOS MÉTODOS DE PAGOS DISPONIBLES?',
-    answer: 'Entre nuestas modalidades de pago, se encuentran Transferencias Bancarias (Solo Venezuela), Internacional: Bianance Pay, PayPal, Zelle y USDT',
+    answer: 'Entre nuestas modalidades de pago, se encuentran Transferencias Bancarias (Venezuela y Chile), Internacional: Binance Pay, PayPal y USDT',
   },
   {
     id: 4,
@@ -95,7 +95,7 @@ export const InicioPage = () => {
               </div>
               <div className="mt-[24px]">
                 <a href='#paquetes'>
-                  <Button className='red-primary text-white rounded-md px-8 py-6'>COMPRAR AHORA</Button>
+                  <Button className='bg-redprimary text-white rounded-md px-8 py-6'>COMPRAR AHORA</Button>
                 </a>
               </div>
             </div>
@@ -108,8 +108,8 @@ export const InicioPage = () => {
             <img src={logo} alt="Logo" />
           </div>
           <div className='my-6'>
-            <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
-              <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>Películas, Series y Canales</p>
+            <p className='text-3xl text-center text-redprimary' style={{fontFamily: 'Lexend'}}>
+              <p style={{fontStyle: 'normal'}}>Películas, Series y Canales</p>
             </p>
             <p className='text-xl text-center' style={{fontFamily: 'Poppins'}}>
               <p style={{fontStyle: 'normal'}}>Transmisión ilimitada de las Últimas Películas, Series y Variedad de Canales en Vivo</p>
@@ -121,8 +121,8 @@ export const InicioPage = () => {
         </div>
         {/* DEPORTES Y LIGAS */}
         <div className='mt-8 mb-6'>
-          <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
-            <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>
+          <p className='text-3xl text-center text-redprimary' style={{fontFamily: 'Lexend'}}>
+            <p style={{fontStyle: 'normal'}}>
               Deportes y Mejores Ligas
             </p>
           </p>
@@ -136,8 +136,8 @@ export const InicioPage = () => {
         {/* Planes Detalle */}
         <div className="space-y-4 px-6 sm:px-16 md:px-32 lg:px-64 mt-[48px]"  id='paquetes'>
           <div className='my-8'>
-            <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
-              <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>
+            <p className='text-3xl text-center text-redprimary' style={{fontFamily: 'Lexend'}}>
+              <p style={{fontStyle: 'normal'}}>
                 Nuestras Promociones
               </p>
             </p>
@@ -301,8 +301,8 @@ export const InicioPage = () => {
         {/* Planes Reseller */}
         <div className="space-y-4 px-6 lg:px-32 xl:px-48 2xl:px-64" id='reseller'>
           <div className='my-24'>
-            <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
-              <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>
+            <p className='text-3xl text-center text-redprimary' style={{fontFamily: 'Lexend'}}>
+              <p style={{fontStyle: 'normal'}}>
                 ¿Desea obtener ganancias?
               </p>
             </p>
@@ -513,8 +513,8 @@ export const InicioPage = () => {
         {/* Distribuidores */}
         {/* <div className="space-y-4 px-6 lg:px-32 xl:px-48 2xl:px-64" id='distribuidores'>
           <div className='my-24'>
-            <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
-              <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>
+            <p className='text-3xl text-center text-redprimary' style={{fontFamily: 'Lexend'}}>
+              <p style={{fontStyle: 'normal'}}>
                 Distribuidores Oficiales
               </p>
             </p>
@@ -660,8 +660,8 @@ export const InicioPage = () => {
         {/* Descargas */}
         <div className="space-y-4 px-6 sm:px-8 md:px-16 xl:px-48 mt-12" id='descargas'>
           <div className='my-32'>
-            <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
-              <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>
+            <p className='text-3xl text-center text-redprimary' style={{fontFamily: 'Lexend'}}>
+              <p style={{fontStyle: 'normal'}}>
                 Descarga de Aplicaciones
               </p>
             </p>
@@ -848,8 +848,8 @@ export const InicioPage = () => {
         {/* FAQs */}
         <div className="space-y-4 px-6 sm:px-8 md:px-16 xl:px-64 mt-12" id='faqs'>
           <div className='my-32'>
-            <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
-                <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>
+            <p className='text-3xl text-center text-redprimary' style={{fontFamily: 'Lexend'}}>
+                <p style={{fontStyle: 'normal'}}>
                   Preguntas Frecuentes
                 </p>
               </p>
