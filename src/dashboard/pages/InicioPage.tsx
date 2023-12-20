@@ -134,7 +134,7 @@ export const InicioPage = () => {
         </div>
         <CustomSplide id="splideLeagues" perPage={7} extraClass={`my-3`} images={imagesLeagues} />
         {/* Planes Detalle */}
-        <div className="space-y-4 px-6 sm:px-16 md:px-32 lg:px-64 mt-[48px]"  id='paquetes'>
+        <div className="space-y-4 px-6 lg:px-32 xl:px-48 2xl:px-64 mt-[48px]"  id='paquetes'>
           <div className='my-8'>
             <p className='text-3xl text-center text-redprimary' style={{fontFamily: 'Lexend'}}>
               <p style={{fontStyle: 'normal'}}>
@@ -146,7 +146,7 @@ export const InicioPage = () => {
                 Planes Premium
               </p>
             </p>
-            <div className="mt-8 grid xl:grid-cols-3 justify-center items-center gap-6">
+            <div className="mt-8 flex flex-wrap justify-center items-center gap-6">
               {/* Plan 1 mes */}
               <Card className="rounded-xl hover:shadow-xl">
                   <div className="p-6 text-center">
@@ -157,6 +157,48 @@ export const InicioPage = () => {
                       <div style={{fontFamily: 'Poppins', fontWeight: '400'}} className="flex items-center justify-center mb-4">
                           <span className="text-2xl xl:text-4xl font-semilight text-redprimary">$</span>
                           <span className="text-5xl xl:text-7xl font-semilight text-redprimary">5</span>
+                          <span className="text-2xl xl:text-3xl font-light "> USD</span>
+                      </div>
+                      <p className='my-2 text-xl text-center flex flex-row space-x-2'>
+                          <em><IconCheck size={32} className='text-redprimary'/></em>
+                          <em className='font-extralight'> 3 pantallas simultáneas</em>
+                      </p>
+                      <p className='my-2 text-xl text-center flex flex-row space-x-2'>
+                          <em><IconCheck size={32} className='text-redprimary'/></em>
+                          <em className='font-extralight'> Más de 30,000 Peliculas</em>
+                      </p>
+                      <p className='my-2 text-xl text-center flex flex-row space-x-2'>
+                          <em><IconCheck size={32} className='text-redprimary'/></em>
+                          <em className='font-extralight'> Más de 4,000 Series</em>
+                      </p>
+                      <p className='my-2 text-xl text-center flex flex-row space-x-2'>
+                          <em><IconCheck size={32} className='text-redprimary'/></em>
+                          <em className='font-extralight'> Más de 3,000 Canales TV</em>
+                      </p>
+                  </div>
+                  <div className="mb-2 p-2 bg-gray-200 dark:bg-gray-700 h-24 flex flex-col items-center justify-center">
+                    <span className="md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl font-light text-center" style={{fontFamily: 'Lexend'}}>3 pantallas simultáneas</span>
+                  </div>
+                  <div className="p-6">
+                      <a
+                      href="https://api.whatsapp.com/send/?phone=+56928875143&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
+                      target="_blank"
+                      className="h-20 flex flex-col justify-center items-center w-full py-2 px-4 bg-redprimary text-white rounded-sm text-center font-semibold hover:bg-red-700 transition duration-300"
+                  >
+                      Comprar
+                      </a>
+                  </div>
+              </Card>
+              {/* Plan 3 meses */}
+              <Card className="rounded-xl hover:shadow-xl">
+                  <div className="p-6 text-center">
+                      <p className="xl:text-lg 2xl:text-xl font-semibold mb-4 flex flex-row justify-center items-center">
+                        <span>&nbsp;&nbsp;3 Meses de Servicio</span>
+                        <span className="text-2xl xl:text-3xl 2xl:text-4xl font-semilight text-redprimary">&nbsp;&nbsp;</span>
+                      </p> 
+                      <div style={{fontFamily: 'Poppins', fontWeight: '400'}} className="flex items-center justify-center mb-4">
+                          <span className="text-2xl xl:text-4xl font-semilight text-redprimary">$</span>
+                          <span className="text-5xl xl:text-7xl font-semilight text-redprimary">12</span>
                           <span className="text-2xl xl:text-3xl font-light "> USD</span>
                       </div>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
