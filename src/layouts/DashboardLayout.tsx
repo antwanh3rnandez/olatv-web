@@ -3,8 +3,8 @@ import { useTheme } from "../components/ThemeProvider"
 import { ModeToggle } from "../components/ToggleDarkMode";
 import { ScrollToTopButton } from "../components/ScrollToTopButton";
 import avatar from '../assets/avatar.png';
-import logoLight from '../assets/olatv-logo.png';
-import logoDark from '../assets/olatv-logo-white.png';
+import logoLight from '../assets/logo-dark.png';
+import logoDark from '../assets/logo-white.png';
 import { IconMenu2 } from "@tabler/icons-react";
 import { Card } from "../components/ui/card";
 
@@ -161,8 +161,8 @@ export const DashboardLayout = ({ children }: { children: ReactNode }) => {
       <main className="" onClick={closeMobileMenu}>
         {children}
         <FloatingWhatsApp 
-            phoneNumber='+584244632518'
-            accountName='OlaTV Oficial'
+            phoneNumber='+56928875143'
+            accountName='InterTV VIP'
             statusMessage='Normalmente responde en algunos segundos'
             chatMessage="Hola, Como podemos ayudarte hoy? 🤝"
             placeholder='Escribe un mensaje...'

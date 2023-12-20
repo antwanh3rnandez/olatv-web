@@ -21,10 +21,10 @@ import { useTheme } from "../../components/ThemeProvider"
 import { CustomSplide } from "../../components/CustomSplide"
 import hero from "../../assets/hero.webp"
 import callToActionBG from "../../assets/bg.webp"
-import logoLight from '../../assets/olatv-logo.png';
-import logoDark from '../../assets/olatv-logo-white.png';
-import screenshot1 from '../../assets/screenshot1.webp';
-import screenshot2 from '../../assets/screenshot2.webp';
+import logoLight from '../../assets/logo-dark.png';
+import logoDark from '../../assets/logo-white.png';
+import screenshot1 from '../../assets/screenshot1.jpeg';
+import screenshot2 from '../../assets/screenshot2.jpeg';
 import screenshot3 from '../../assets/screenshot3.webp';
 import screenshot4 from '../../assets/screenshot4.webp';
 import { imagesMovies, imagesChannels, imagesLeagues } from '../../hooks/useImagesImport';
@@ -90,7 +90,7 @@ export const InicioPage = () => {
                 </h2>
               <div className="mt-[12px]">
                 <h2 className="hero-text-sub">
-                Disfruta de tus Deportes y Películas Favoritas con la Mejor Suscripción a IPTV | Más de 2,000 Canales en <br></br> Vivo con una Calidad Impresionante de 4K/FHD/HD | Obtenga Acceso Ilimitado a la Biblioteca VOD <br></br> con las Últimas Películas y Series | Regístrese Ahora para Obtener Descuentos Exclusivos y Soporte 24/7
+                Disfruta de tus Deportes y Películas Favoritas con la Mejor Suscripción a IPTV | Más de 3,000 Canales en <br></br> Vivo con una Calidad Impresionante de 4K/FHD/HD | Obtenga Acceso Ilimitado a la Biblioteca VOD <br></br> con las Últimas Películas y Series | Regístrese Ahora para Obtener Descuentos Exclusivos y Soporte 24/7
                 </h2>
               </div>
               <div className="mt-[24px]">
@@ -112,7 +112,7 @@ export const InicioPage = () => {
               <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>Películas, Series y Canales</p>
             </p>
             <p className='text-xl text-center' style={{fontFamily: 'Poppins'}}>
-              <p style={{fontStyle: 'normal'}}>Transmisión ilimitada de las Últimas Películas, Series y Variante de Canales en Vivo</p>
+              <p style={{fontStyle: 'normal'}}>Transmisión ilimitada de las Últimas Películas, Series y Variedad de Canales en Vivo</p>
             </p>
           </div>
           <CustomSplide id="splideMovies" perPage={9} extraClass={`my-3`} images={imagesMovies} />
@@ -156,7 +156,7 @@ export const InicioPage = () => {
                       </p> 
                       <div style={{fontFamily: 'Poppins', fontWeight: '400'}} className="flex items-center justify-center mb-4">
                           <span className="text-2xl xl:text-4xl font-semilight text-redprimary">$</span>
-                          <span className="text-5xl xl:text-7xl font-semilight text-redprimary">7</span>
+                          <span className="text-5xl xl:text-7xl font-semilight text-redprimary">5</span>
                           <span className="text-2xl xl:text-3xl font-light "> USD</span>
                       </div>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
@@ -165,15 +165,15 @@ export const InicioPage = () => {
                       </p>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
                           <em><IconCheck size={32} className='text-redprimary'/></em>
-                          <em className='font-extralight'> Más de 25,000 Peliculas</em>
+                          <em className='font-extralight'> Más de 30,000 Peliculas</em>
                       </p>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
                           <em><IconCheck size={32} className='text-redprimary'/></em>
-                          <em className='font-extralight'> Más de 3,000 Series</em>
+                          <em className='font-extralight'> Más de 4,000 Series</em>
                       </p>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
                           <em><IconCheck size={32} className='text-redprimary'/></em>
-                          <em className='font-extralight'> Más de 2,500 Canales TV</em>
+                          <em className='font-extralight'> Más de 3,000 Canales TV</em>
                       </p>
                   </div>
                   <div className="mb-2 p-2 bg-gray-200 dark:bg-gray-700 h-24 flex flex-col items-center justify-center">
@@ -181,7 +181,7 @@ export const InicioPage = () => {
                   </div>
                   <div className="p-6">
                       <a
-                      href="https://api.whatsapp.com/send/?phone=+584244632518&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
+                      href="https://api.whatsapp.com/send/?phone=+56928875143&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
                       target="_blank"
                       className="h-20 flex flex-col justify-center items-center w-full py-2 px-4 bg-redprimary text-white rounded-sm text-center font-semibold hover:bg-red-700 transition duration-300"
                   >
@@ -198,7 +198,7 @@ export const InicioPage = () => {
                       </p> 
                       <div style={{fontFamily: 'Poppins', fontWeight: '400'}} className="flex items-center justify-center mb-4">
                           <span className="text-2xl xl:text-4xl font-semilight text-redprimary">$</span>
-                          <span className="text-5xl xl:text-7xl font-semilight text-redprimary">35</span>
+                          <span className="text-5xl xl:text-7xl font-semilight text-redprimary">20</span>
                           <span className="text-2xl xl:text-3xl font-light "> USD</span>
                       </div>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
@@ -207,15 +207,15 @@ export const InicioPage = () => {
                       </p>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
                           <em><IconCheck size={32} className='text-redprimary'/></em>
-                          <em className='font-extralight'> Más de 25,000 Peliculas</em>
+                          <em className='font-extralight'> Más de 30,000 Peliculas</em>
                       </p>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
                           <em><IconCheck size={32} className='text-redprimary'/></em>
-                          <em className='font-extralight'> Más de 3,000 Series</em>
+                          <em className='font-extralight'> Más de 4,000 Series</em>
                       </p>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
                           <em><IconCheck size={32} className='text-redprimary'/></em>
-                          <em className='font-extralight'> Más de 2,500 Canales TV</em>
+                          <em className='font-extralight'> Más de 3,000 Canales TV</em>
                       </p>
                   </div>
                   <div className="mb-2 p-2 bg-gray-200 dark:bg-gray-700 h-24 flex flex-col items-center justify-center">
@@ -223,7 +223,7 @@ export const InicioPage = () => {
                   </div>
                   <div className="p-6">
                       <a
-                      href="https://api.whatsapp.com/send/?phone=+584244632518&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
+                      href="https://api.whatsapp.com/send/?phone=+56928875143&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
                       target="_blank"
                       className="h-20 flex flex-col justify-center items-center w-full py-2 px-4 bg-redprimary text-white rounded-sm text-center font-semibold hover:bg-red-700 transition duration-300"
                   >
@@ -240,7 +240,7 @@ export const InicioPage = () => {
                       </p> 
                       <div style={{fontFamily: 'Poppins', fontWeight: '400'}} className="flex items-center justify-center mb-4">
                           <span className="text-2xl xl:text-4xl font-semilight text-redprimary">$</span>
-                          <span className="text-5xl xl:text-7xl font-semilight text-redprimary">70</span>
+                          <span className="text-5xl xl:text-7xl font-semilight text-redprimary">40</span>
                           <span className="text-2xl xl:text-3xl font-light "> USD</span>
                       </div>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
@@ -249,15 +249,15 @@ export const InicioPage = () => {
                       </p>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
                           <em><IconCheck size={32} className='text-redprimary'/></em>
-                          <em className='font-extralight'> Más de 25,000 Peliculas</em>
+                          <em className='font-extralight'> Más de 30,000 Peliculas</em>
                       </p>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
                           <em><IconCheck size={32} className='text-redprimary'/></em>
-                          <em className='font-extralight'> Más de 3,000 Series</em>
+                          <em className='font-extralight'> Más de 4,000 Series</em>
                       </p>
                       <p className='my-2 text-xl text-center flex flex-row space-x-2'>
                           <em><IconCheck size={32} className='text-redprimary'/></em>
-                          <em className='font-extralight'> Más de 2,500 Canales TV</em>
+                          <em className='font-extralight'> Más de 3,000 Canales TV</em>
                       </p>
                   </div>
                   <div className="mb-2 p-2 bg-gray-200 dark:bg-gray-700 h-24 flex flex-col items-center justify-center">
@@ -265,7 +265,7 @@ export const InicioPage = () => {
                   </div>
                   <div className="p-6">
                       <a
-                      href="https://api.whatsapp.com/send/?phone=+584244632518&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
+                      href="https://api.whatsapp.com/send/?phone=+56928875143&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
                       target="_blank"
                       className="h-20 flex flex-col justify-center items-center w-full py-2 px-4 bg-redprimary text-white rounded-sm text-center font-semibold hover:bg-red-700 transition duration-300"
                   >
@@ -288,7 +288,7 @@ export const InicioPage = () => {
                 <div className="w-full h-full flex flex-wrap xl:flex-col space-y-0 xl:space-x-8 items-center justify-center">
                   <div className="flex flex-col space-y-2 md:text-2xl lg:text-3xl xl:text-4xl items-center justify-center" style={{fontFamily: 'Lexend'}}>
                     <p className='font-extralight'>Compruebe por usted mismo la calidad de nuestro servicio </p>
-                    <a href='https://api.whatsapp.com/send/?phone=+584244632518&text=Hola%20que%20tal%2C%20%C2%BFMe%20podr%C3%ADan%20generar%20un%20demo%3F%20por%20favor.' target="_blank">
+                    <a href='https://api.whatsapp.com/send/?phone=+56928875143&text=Hola%20que%20tal%2C%20%C2%BFMe%20podr%C3%ADan%20generar%20un%20demo%3F%20por%20favor.' target="_blank">
                       <Button className='bg-redprimary rounded-md px-6 py-4 uppercase hover:bg-red-900 text-black dark:text-white'>Solicitar Demo</Button>
                     </a>
                     <em>¡Obtenga su demo ahora!</em>
@@ -343,7 +343,7 @@ export const InicioPage = () => {
                   </div>
                   <div className="p-6">
                       <a
-                      href="https://api.whatsapp.com/send/?phone=+584244632518&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
+                      href="https://api.whatsapp.com/send/?phone=+56928875143&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
                       target="_blank"
                       className="h-20 flex flex-col justify-center items-center w-full py-2 px-4 bg-redprimary text-white rounded-sm text-center font-semibold hover:bg-red-700 transition duration-300"
                   >
@@ -382,7 +382,7 @@ export const InicioPage = () => {
                   </div>
                   <div className="p-6">
                       <a
-                      href="https://api.whatsapp.com/send/?phone=+584244632518&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
+                      href="https://api.whatsapp.com/send/?phone=+56928875143&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
                       target="_blank"
                       className="h-20 flex flex-col justify-center items-center w-full py-2 px-4 bg-redprimary text-white rounded-sm text-center font-semibold hover:bg-red-700 transition duration-300"
                   >
@@ -421,7 +421,7 @@ export const InicioPage = () => {
                   </div>
                   <div className="p-6">
                       <a
-                      href="https://api.whatsapp.com/send/?phone=+584244632518&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
+                      href="https://api.whatsapp.com/send/?phone=+56928875143&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
                       target="_blank"
                       className="h-20 flex flex-col justify-center items-center w-full py-2 px-4 bg-redprimary text-white rounded-sm text-center font-semibold hover:bg-red-700 transition duration-300"
                   >
@@ -460,7 +460,7 @@ export const InicioPage = () => {
                   </div>
                   <div className="p-6">
                       <a
-                      href="https://api.whatsapp.com/send/?phone=+584244632518&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
+                      href="https://api.whatsapp.com/send/?phone=+56928875143&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
                       target="_blank"
                       className="h-20 flex flex-col justify-center items-center w-full py-2 px-4 bg-redprimary text-white rounded-sm text-center font-semibold hover:bg-red-700 transition duration-300"
                   >
@@ -499,7 +499,7 @@ export const InicioPage = () => {
                   </div>
                   <div className="p-6">
                       <a
-                      href="https://api.whatsapp.com/send/?phone=+584244632518&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
+                      href="https://api.whatsapp.com/send/?phone=+56928875143&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20planes%3F"
                       target="_blank"
                       className="h-20 flex flex-col justify-center items-center w-full py-2 px-4 bg-redprimary text-white rounded-sm text-center font-semibold hover:bg-red-700 transition duration-300"
                   >
@@ -511,16 +511,16 @@ export const InicioPage = () => {
           </div>
         </div>
         {/* Distribuidores */}
-        <div className="space-y-4 px-6 lg:px-32 xl:px-48 2xl:px-64" id='distribuidores'>
+        {/* <div className="space-y-4 px-6 lg:px-32 xl:px-48 2xl:px-64" id='distribuidores'>
           <div className='my-24'>
             <p className='text-3xl text-center' style={{fontFamily: 'Lexend'}}>
               <p style={{fontStyle: 'normal', color: 'rgb(244, 13, 3)'}}>
                 Distribuidores Oficiales
               </p>
             </p>
-            <div className="mt-8 flex flex-wrap justify-center items-center gap-6">
+            <div className="mt-8 flex flex-wrap justify-center items-center gap-6"> */}
               {/* Centro del Pais */}
-              <Card className="p-6 text-center rounded-xl hover:shadow-2xl"> 
+              {/* <Card className="p-6 text-center rounded-xl hover:shadow-2xl"> 
                 <CardTitle>
                   <p className='text-2xl text-center' style={{fontFamily: 'Poppins'}}>
                     <p style={{fontStyle: 'normal'}}>
@@ -570,9 +570,9 @@ export const InicioPage = () => {
                     </a>
                   </div>
                 </Card>
-              </Card>
+              </Card> */}
               {/* Oriente del Pais */}
-              <Card className="p-6 text-center rounded-xl hover:shadow-2xl"> 
+              {/* <Card className="p-6 text-center rounded-xl hover:shadow-2xl"> 
                 <CardTitle>
                   <p className='text-2xl text-center' style={{fontFamily: 'Poppins'}}>
                     <p style={{fontStyle: 'normal'}}>
@@ -601,9 +601,9 @@ export const InicioPage = () => {
                     </a>
                   </div>
                 </Card>
-              </Card>
+              </Card> */}
               {/* Distrito Federal */}
-              <Card className="p-6 text-center rounded-xl hover:shadow-2xl"> 
+              {/* <Card className="p-6 text-center rounded-xl hover:shadow-2xl"> 
                 <CardTitle>
                   <p className='text-2xl text-center' style={{fontFamily: 'Poppins'}}>
                     <p style={{fontStyle: 'normal'}}>
@@ -656,7 +656,7 @@ export const InicioPage = () => {
               </Card>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Descargas */}
         <div className="space-y-4 px-6 sm:px-8 md:px-16 xl:px-48 mt-12" id='descargas'>
           <div className='my-32'>
@@ -676,7 +676,7 @@ export const InicioPage = () => {
                 <CardTitle>
                   <p className='text-2xl text-center' style={{fontFamily: 'Poppins'}}>
                     <p style={{fontStyle: 'normal'}}>
-                      Ola Tv Smart
+                      InterTV VIP
                     </p>
                   </p>
                 </CardTitle>
@@ -688,7 +688,8 @@ export const InicioPage = () => {
                   </p>
                   <div className='flex space-x-2 flex-col items-center justify-center'>
                     <img src={screenshot1} className='mb-2 w-96' />
-                    <a className='mb-2' href='https://bit.ly/Ola-TV' target='_blank'>
+                    <img src={screenshot2} className='mb-2 w-96' />
+                    <a className='mb-2' href='https://n9.cl/intertv-vip' target='_blank'>
                       <div className='flex flex-col items-center justify-center'>
                         <Button className='bg-redprimary'>
                             <p>Descargar</p>
@@ -697,13 +698,13 @@ export const InicioPage = () => {
                     </a>
                     <div className='mb-2 flex flex-col items-center justify-center'>
                       <p className='mb-2'>Codigo Downloader</p> 
-                      <p className='text-lg text-redprimary'>770568</p> 
+                      <p className='text-lg text-redprimary'>517956</p> 
                     </div>
                   </div>
                 </Card>
               </Card>
               {/* Ola Tv Flix  */}
-              <Card className="p-6 text-center rounded-xl hover:shadow-2xl"> 
+              {/* <Card className="p-6 text-center rounded-xl hover:shadow-2xl"> 
                 <CardTitle>
                   <p className='text-2xl text-center' style={{fontFamily: 'Poppins'}}>
                     <p style={{fontStyle: 'normal'}}>
@@ -732,9 +733,9 @@ export const InicioPage = () => {
                     </div>
                   </div>
                 </Card>
-              </Card>
+              </Card> */}
               {/* Ola Tv Xteam */}
-              <Card className="p-6 text-center rounded-xl hover:shadow-2xl"> 
+              {/* <Card className="p-6 text-center rounded-xl hover:shadow-2xl"> 
                 <CardTitle>
                   <p className='text-2xl text-center' style={{fontFamily: 'Poppins'}}>
                     <p style={{fontStyle: 'normal'}}>
@@ -763,9 +764,9 @@ export const InicioPage = () => {
                     </div>
                   </div>
                 </Card>
-              </Card>
+              </Card> */}
               {/* Reproductor Web: */}
-              <Card className="p-6 text-center rounded-xl hover:shadow-2xl"> 
+              {/* <Card className="p-6 text-center rounded-xl hover:shadow-2xl"> 
                 <CardTitle>
                   <p className='text-2xl text-center' style={{fontFamily: 'Poppins'}}>
                     <p style={{fontStyle: 'normal'}}>
@@ -794,7 +795,7 @@ export const InicioPage = () => {
                     </div>
                   </div>
                 </Card>
-              </Card>
+              </Card> */}
             </div>
           </div>
         </div>
@@ -808,7 +809,7 @@ export const InicioPage = () => {
             </p>
           </div>
           <div className='mb-12 xl:mb-20 flex flex-wrap justify-center xl:flex-row gap-4 lg:gap:16 xl:gap-32'>
-            <a href='https://www.instagram.com/olatv_oficial' target='_blank' className='hover:text-redprimary'>
+            <a href='https://www.instagram.com/intertvvip?igshid=OGQ5ZDc2ODk2ZA==' target='_blank' className='hover:text-redprimary'>
               <div className='flex flex-row'>
                 <IconBrandInstagram size={64} className='text-redprimary'/>
                 <div className='flex flex-col items-start justify-center'>
@@ -817,7 +818,7 @@ export const InicioPage = () => {
                 </div>
               </div>
             </a>
-            <a href='https://t.me/olatviptv' target='_blank' className='hover:text-redprimary'>
+            <a href='https://t.me/intertvvip' target='_blank' className='hover:text-redprimary'>
               <div className='flex flex-row'>
                 <IconBrandTelegram size={64} className='text-redprimary'/>
                 <div className='flex flex-col items-start justify-start'>
@@ -826,7 +827,7 @@ export const InicioPage = () => {
                 </div>
               </div>
             </a>
-            <a href='https://api.whatsapp.com/send/?phone=+584244632518&text=Hola%20que%20tal%2C%20%C2%BFMe%20puedes%20brindar%20mas%20informaci%C3%B3n%20acerca%20de%20tus%20servicios%3F' target='_blank' className='hover:text-redprimary'>
+            <a href='https://wa.me/message/MMVGPG7Q6HJ2B1' target='_blank' className='hover:text-redprimary'>
               <div className='flex flex-row'>
                 <IconBrandWhatsapp size={64} className='text-redprimary'/>
                 <div className='flex flex-col items-start justify-start'>
