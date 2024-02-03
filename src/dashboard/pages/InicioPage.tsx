@@ -731,13 +731,18 @@ export const InicioPage = () => {
                   <div className='flex space-x-2 flex-col items-center justify-center'>
                     <img src={screenshot1} className='mb-2 w-96' />
                     <img src={screenshot2} className='mb-2 w-96' />
-                    <a className='mb-2' href='https://n9.cl/intertv-vip' target='_blank'>
-                      <div className='flex flex-col items-center justify-center'>
-                        <Button className='bg-redprimary'>
-                            <p>Descargar</p>
-                        </Button>
+                      <div className='flex flex-col gap-3 items-center justify-center'>
+                        <a className='' href='https://play.google.com/store/apps/details?id=com.iptvsmarters.intertv' target='_blank'>
+                          <Button className='bg-orange-500'>
+                              <p>Descargar (PlayStore)</p>
+                          </Button>
+                        </a>
+                        <a className='mb-2' href='https://n9.cl/intertv-vip' target='_blank'>
+                          <Button className='bg-redprimary'>
+                              <p>Descargar (Directo)</p>
+                          </Button>
+                        </a>
                       </div>
-                    </a>
                     <div className='mb-2 flex flex-col items-center justify-center'>
                       <p className='mb-2'>Codigo Downloader</p> 
                       <p className='text-lg text-redprimary'>517956</p> 
